@@ -19,7 +19,23 @@ namespace Produktverwaltung
         }
         public static bool IsGreater(int a, int b, int c)
         {
+            //if V1
+            //if V2
+            //if V3
+
             return a > b & c>a;
+        }
+        public static bool IsGreaterV1(int a, int b, int c)
+        {
+            return a > b & c > a;
+        }
+        public static bool IsGreaterV2(int a, int b, int c)
+        {
+            return a > b & c > a;
+        }
+        public static bool IsGreaterV3(int a, int b, int c)
+        {
+            return a > b & c > a;
         }
 
         public static void PrintHello(string firstname)
