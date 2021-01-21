@@ -31,6 +31,24 @@ namespace PSP2ConsoleApp
             int erbebnis2 = z1(12, 5);
             z1 = m1.Subtract;
             int ergebnis3 = z1(10, 2);
+
+            Finanzamt f1 = new Finanzamt();
+            f1.BerechneEinkommensteuer(new Variante1(), 20);
+            f1.BerechneEinkommensteuer(new Variante2(), 20);
+
+            f1.BerechneEinkommensteuer(V1,10);
+            f1.BerechneEinkommensteuer(V2, 10);
+
         }
+
+        public static double  V1(double e, double s)
+        {
+            return (e * 0.30) + s;
+        }
+        public static double V2(double e, double s)
+        {
+            return (e + 10) * s;
+        }
+
     }
 }
