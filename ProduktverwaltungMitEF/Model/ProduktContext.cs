@@ -14,11 +14,14 @@ namespace ProduktverwaltungMitEF.Model
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             /*
-                Install - Package Microsoft.EntityFrameworkCore.Tools
-                Add - Migration InitialCreate
-                Update - Database
+                Install-Package Microsoft.EntityFrameworkCore.Tools
+                Add-Migration InitialCreate
+                Update-Database
+                Add-Migration AddKategorie
+                Update-Database
             */
             //NuGet Microsoft.EntityFrameworkCore.SqlServer
+            //c:\user\jgrabner\Produktverwaltung.mdf
             optionsBuilder.UseSqlServer(
                 @"Server=(localdb)\mssqllocaldb;Database=Produktverwaltung;Integrated Security=True");
         }
