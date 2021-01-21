@@ -39,15 +39,18 @@ namespace PSP2ConsoleApp
             f1.BerechneEinkommensteuer(V1,10);
             f1.BerechneEinkommensteuer(V2, 10);
 
+            /*
             SayHello(french, "Male"); // delegate
             SayHello(new Frechn(), "Female"); // Interface 
             SayHello(italien, "Female");
             SayHello(new Italien(),"Female");
             SayHello(spanish,"Male");
             SayHello(german,"Female");
+            */
 
         }
 
+        /*
         //Auflösung 10:50
         public static void SayHello(..... logik, string geschlecht) //Inferface / Delegate
         {
@@ -55,6 +58,7 @@ namespace PSP2ConsoleApp
             Console.WriteLine(ergebnis); "Hola, Ciau, Hallo";
         }
 
+        */
         public static double  V1(double e, double s)
         {
             return (e * 0.30) + s;

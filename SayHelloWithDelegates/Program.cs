@@ -11,7 +11,33 @@ namespace SayHelloWithDelegates
             SayHello(Spanish,"F");
             SayHello(Spanish,"M");
             SayHello(German,"M");
+
+            BegruessungsGenerator begruessungsGenerator = new BegruessungsGenerator();
+
+            SayHello(begruessungsGenerator.Hoeflich,"F");
+            SayHello(begruessungsGenerator.SaloppUndZwanglos,"F");
+
+            SayHello(DemoFuerLambda, "F");
+            //x fließt in die Methode
+            SayHello(x => "Seruvs. Sie sind " + x, "F");
+
+            SayHello(x =>
+            {
+                if (x == "F")
+                    return "Sehr geehrte Frau ";
+                else
+                    return "Sehr geehrte Herr";
+            },
+            "F");
+
+
         }
+
+        public static string DemoFuerLambda(string g)
+        {
+            return "Servus. Sie sind " + g;
+        }
+
         public static string Spanish(string geschlecht)
         {
             string result = "";
