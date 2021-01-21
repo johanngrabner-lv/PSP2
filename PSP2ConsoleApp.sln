@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSP2ConsoleApp", "PSP2Conso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SayHelloWithDelegates", "SayHelloWithDelegates\SayHelloWithDelegates.csproj", "{2947E84F-17D4-4293-8EB3-A43A0BCD2097}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Produktverwaltung", "Produktverwaltung\Produktverwaltung.csproj", "{EFAFE8AA-CAAD-421E-BE0A-65B12C60B532}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2947E84F-17D4-4293-8EB3-A43A0BCD2097}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2947E84F-17D4-4293-8EB3-A43A0BCD2097}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2947E84F-17D4-4293-8EB3-A43A0BCD2097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFAFE8AA-CAAD-421E-BE0A-65B12C60B532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFAFE8AA-CAAD-421E-BE0A-65B12C60B532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFAFE8AA-CAAD-421E-BE0A-65B12C60B532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFAFE8AA-CAAD-421E-BE0A-65B12C60B532}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
