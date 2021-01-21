@@ -6,13 +6,18 @@ using System.Text;
 namespace ProduktverwaltungMitEF.Model
 {
     //NuGet EntityFrameworkCore
-    class ProduktContext: DbContext
+    //https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=visual-studio
+    class ProduktContext : DbContext
     {
         public DbSet<Produkt> MeineProdukte{ get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           
+            /*
+                Install - Package Microsoft.EntityFrameworkCore.Tools
+                Add - Migration InitialCreate
+                Update - Database
+            */
             //NuGet Microsoft.EntityFrameworkCore.SqlServer
             optionsBuilder.UseSqlServer(
                 @"Server=(localdb)\mssqllocaldb;Database=Produktverwaltung;Integrated Security=True");

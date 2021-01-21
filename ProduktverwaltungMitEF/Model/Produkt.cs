@@ -10,5 +10,7 @@ namespace ProduktverwaltungMitEF
         public int ProduktId { get; set; }
         public string Bezeichnung { get; set; }
         public double Preis { get; set; }
+
+        public string Kategorie { get; set; }
     }
 }

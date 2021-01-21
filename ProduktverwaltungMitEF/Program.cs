@@ -9,7 +9,7 @@ namespace ProduktverwaltungMitEF
         {
             Console.WriteLine("Hello World!");
 
-            Produkt p1 = new Produkt() { Bezeichnung = "Tastatur", Preis = 50 };
+            Produkt p1 = new Produkt() { Bezeichnung = "Tastatur", Preis = 50, Kategorie="IT" };
 
             ProduktContext ctx = new ProduktContext();
 
