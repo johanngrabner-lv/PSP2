@@ -35,6 +35,13 @@ namespace KonzertBeispiel
             konzertContainer.NeuesKonzertEintragen(ladyGaga);
 
 
+            ProduktVerwaltung p = new ProduktVerwaltung();
+            p.OnNeuesProdukt += NewProduktEventHandler;
+            p.NeuesProduktHinzufuegen(new Produkt() { Bezeichnung = "Hose blau" });
+
+            //bis 13:50 Beispiel
+            //danach Pause bis 14:15 --- 
+            //ab 14:15 Auflösung
         }
 
 
