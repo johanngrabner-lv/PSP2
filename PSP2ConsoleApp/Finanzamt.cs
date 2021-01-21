@@ -26,17 +26,20 @@ namespace PSP2ConsoleApp
     }
     class Finanzamt
     {
-        public double BerechneEinkommensteuer(BerechnungsLogik logik)
+        //Variante mit Delegate
+        public double BerechneEinkommensteuer(BerechnungsLogik logik, double einkommen)
         {
             //Komplexe Logik 
-            double ergebnis = logik();
+            double ergebnis = logik(einkommen, 30);
             return ergebnis ;
         }
 
+        //Variante über interface
         public double BerechneEinkommensteuer(IBerechnungsLogik logik, double einkommen)
         {
             //Komplexe Logik 
             double ergebnis = logik.Rechnen(einkommen, 30);
+            //Versenden der Erlagscheine
             return ergebnis;
         }
     }
