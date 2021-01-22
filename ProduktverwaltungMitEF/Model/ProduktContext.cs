@@ -13,7 +13,7 @@ namespace ProduktverwaltungMitEF.Model
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            /*
+            /*Extras - Nuget - Console
                 Install-Package Microsoft.EntityFrameworkCore.Tools
                 Add-Migration InitialCreate
                 Update-Database
@@ -23,7 +23,7 @@ namespace ProduktverwaltungMitEF.Model
             //NuGet Microsoft.EntityFrameworkCore.SqlServer
             //c:\user\jgrabner\Produktverwaltung.mdf
             optionsBuilder.UseSqlServer(
-                @"Server=(localdb)\mssqllocaldb;Database=Produktverwaltung;Integrated Security=True");
+                @"Server=(localdb)\mssqllocaldb;Database=ProduktverwaltungV1;Integrated Security=True");
         }
     }
 }
