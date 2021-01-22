@@ -37,8 +37,29 @@ namespace ConsoleAppFramework
 
             CalcAndPrint((x, y) => x % y, 5, 7);
 
+            Bankkonto k1 = new Bankkonto() { Kontoinhaber = "Jungwirth" };
+            Bankkonto k2 = new Bankkonto() { Kontoinhaber = "Jandl" };
+
+            k1.OnKontostandUeber1000 += K1_OnKontostandUeber1000;
+            k2.OnKontostandUeber1000 += K2_OnKontostandUeber1000;
+
+            k1.Kontostand = 700;
+            k1.Kontostand = 1500;
+            k2.Kontostand = 1700;
 
 
+        }
+
+        private static void K2_OnKontostandUeber1000(object arg1, KontoEventArgs e)
+        {
+            Console.WriteLine($"neuer Kontoastnand {e.NeuerKontostand}");
+            Console.Beep(5000, 1000);
+        }
+
+        private static void K1_OnKontostandUeber1000(object arg1, KontoEventArgs e)
+        {
+            Console.WriteLine($"neuer Kontoastnand {e.NeuerKontostand}");
+            Console.WriteLine("Time for shopping");
         }
 
         public static bool IsAGreaterThanB(double a, int b)

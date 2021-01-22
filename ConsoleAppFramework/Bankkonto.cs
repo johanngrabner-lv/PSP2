@@ -6,19 +6,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppFramework
 {
+    public class KontoEventArgs
+    {
+        //Zusatzinfos über das Event
+        public double NeuerKontostand { get; set; }
+    }
+    //Event-Provide, Event-Publisher
     class Bankkonto
     {
+        //sender, eventArgs
+        public event Action<object, KontoEventArgs> OnKontostandUeber1000;
         public string Kontoinhaber { get; set; }
 
         private double _Kontostand;
 
-        private bool _PrivatOderBusiness;
+        private bool PrivatOderBusiness { get; set; }
 
-        public bool PrivatOderBusiness
-        {
-            get { return _PrivatOderBusiness; }
-            set { _PrivatOderBusiness = value; }
-        }
 
        //es geht weiter um 09:15 Uhr mit Events 
 
@@ -27,11 +30,15 @@ namespace ConsoleAppFramework
             get { return _Kontostand; }
             set {
                 _Kontostand = value;
-                /*
-                if (_Kontostand>1000 & OnUeber1000!=null)
+                //Null-Check ob es registrierte Eventhandler überhaupt gibt
+                if (_Kontostand>1000 & OnKontostandUeber1000!=null)
                 {
-
-                }*/
+                    //raise an event
+                    //event auslösen
+                    OnKontostandUeber1000(
+                        this,
+                        new KontoEventArgs() { NeuerKontostand = _Kontostand });
+                }
                 
             }
         }
