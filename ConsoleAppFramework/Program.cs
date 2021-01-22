@@ -47,6 +47,7 @@ namespace ConsoleAppFramework
             k1.Kontostand = 1500;
             k2.Kontostand = 1700;
 
+            //bis 10 Uhr Pause
 
         }
 
