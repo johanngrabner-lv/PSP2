@@ -29,6 +29,18 @@ namespace ConsoleAppFrameworkMitEF
                 Console.WriteLine($"Bez: {produkt.Bezeichnung} Kat {produkt.Kategorie}");
             }
 
+            //Filtern von Daten
+            IQueryable<Produkt> ergebnisV1= 
+                ctx.Produkte.Where(pr => pr.Bezeichnung == "Kugelschreiber");
+
+            //Compiler ermittelt Datentyp aus der rechten Zuweisung
+            var ergebnisV2 = ctx.Produkte.Where(pr => pr.Bezeichnung == "Kugelschreiber");
+            Console.WriteLine("Alle Kugelschreiber");
+            foreach (var prod in ergebnisV1)
+            {
+                Console.WriteLine($"Bez: {prod.Bezeichnung}");
+            }
+
 
         }
     }
