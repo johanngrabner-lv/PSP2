@@ -27,10 +27,11 @@ namespace ConsoleAppFramework
             get { return _Kontostand; }
             set {
                 _Kontostand = value;
+                /*
                 if (_Kontostand>1000 & OnUeber1000!=null)
                 {
 
-                }
+                }*/
                 
             }
         }

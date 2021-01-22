@@ -26,6 +26,10 @@ namespace ConsoleAppFramework
             CalcAndPrint(Add, 10, 20);
             CalcAndPrint(Sub, 10, 20);
 
+            Func<string, int> anzahlZeichen = x => x.Length;
+
+            int anzahlJohann = anzahlZeichen("Johann");
+
             //Lambda 
             CalcAndPrint((x, y) => x + y, 5, 7);
 
