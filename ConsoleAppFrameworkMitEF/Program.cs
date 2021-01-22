@@ -11,11 +11,25 @@ namespace ConsoleAppFrameworkMitEF
     {
         static void Main(string[] args)
         {
-            Produkt p = new Produkt() { Bezeichnung = "Handy", Kategorie = "Telekommunikation" };
+            Produkt p = new Produkt() { Bezeichnung = "Kugelschreiber", Kategorie = "Schreibwaren" };
 
             ProduktContext ctx = new ProduktContext();
-            ctx.Produkte.Add(p);
-            ctx.SaveChanges();// "c:\users\johann.grabner\ProduktContext.mdf"
+            //  ctx.Produkte.Add(p);
+            //  ctx.SaveChanges();// "c:\users\johann.grabner\ProduktContext.mdf"
+
+            //Serverexplorer - DAtenverbindungen -
+            //Verbindung hinzufügen - SQL Server Datenbnakdatei
+            //Löschen, Suchen und ändern
+            //11:15 Uhr -- EF & CRUD
+
+            //alle Datensätze auslesen
+
+            foreach (Produkt produkt in ctx.Produkte)
+            {
+                Console.WriteLine($"Bez: {produkt.Bezeichnung} Kat {produkt.Kategorie}");
+            }
+
+
         }
     }
 }
