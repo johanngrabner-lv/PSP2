@@ -20,7 +20,7 @@ namespace ConsoleAppFramework
             set { _PrivatOderBusiness = value; }
         }
 
-        public event Action<object,>
+       //es geht weiter um 09:15 Uhr mit Events 
 
         public double Kontostand
         {
