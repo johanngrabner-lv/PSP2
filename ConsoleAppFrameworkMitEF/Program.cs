@@ -68,6 +68,10 @@ namespace ConsoleAppFrameworkMitEF
             //1. Holen der Entity 
             //2. Remove
             //3. SaveChanges
+
+            var productToDelete = ctx.Produkte.Find(2);
+            ctx.Produkte.Remove(productToDelete);
+            ctx.SaveChanges();
         }
     }
 }
