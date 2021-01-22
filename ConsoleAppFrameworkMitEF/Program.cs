@@ -41,6 +41,13 @@ namespace ConsoleAppFrameworkMitEF
                 Console.WriteLine($"Bez: {prod.Bezeichnung}");
             }
 
+            var produktMitPK1 = ctx.Produkte.Find(1);
+            if (produktMitPK1 != null)
+            {
+                Console.WriteLine($"Bez: {produktMitPK1.Bezeichnung}");
+            }
+
+
 
         }
     }
