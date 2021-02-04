@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppFrameworkMitEF", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWPF", "HelloWPF\HelloWPF.csproj", "{93F8A301-AC0E-4D82-AB35-295D71F5AC30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventhandlingMitWPF", "EventhandlingMitWPF\EventhandlingMitWPF.csproj", "{770D97DE-ADE3-4C63-B31A-7EAB576902F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{93F8A301-AC0E-4D82-AB35-295D71F5AC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93F8A301-AC0E-4D82-AB35-295D71F5AC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93F8A301-AC0E-4D82-AB35-295D71F5AC30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{770D97DE-ADE3-4C63-B31A-7EAB576902F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{770D97DE-ADE3-4C63-B31A-7EAB576902F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{770D97DE-ADE3-4C63-B31A-7EAB576902F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{770D97DE-ADE3-4C63-B31A-7EAB576902F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

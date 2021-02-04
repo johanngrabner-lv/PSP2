@@ -64,6 +64,33 @@
                 <ListBoxItem>Campu2</ListBoxItem>
             </ListBox.Items>
         </ListBox>
+ 
+        <Button >
+            <Button.Content>
+                <StackPanel>
+                <ListBox>
+                    <ListBox.Items>
+                        <ListBoxItem>Hello</ListBoxItem>
+                        <ListBoxItem>World</ListBoxItem>
+                        <ListBoxItem>Campu2</ListBoxItem>
+                    </ListBox.Items>
+                </ListBox>
+                    <ListBox>
+                        <ListBox.Items>
+                            <ListBoxItem>Mann</ListBoxItem>
+                            <ListBoxItem>Frau</ListBoxItem>
+                            <ListBoxItem>Divers</ListBoxItem>
+                        </ListBox.Items>
+                    </ListBox>
+                </StackPanel>
+            </Button.Content>
+        </Button>
 
+        <ListBox>
+            <ListBox.Items>
+                <Button>Hello</Button>
+                <CheckBox>Check</CheckBox>
+            </ListBox.Items>
+        </ListBox>
     </StackPanel>
 </Window>
