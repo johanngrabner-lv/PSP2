@@ -18,13 +18,52 @@
                     <Button>B1</Button>
                 </StackPanel>
             </Button.Content>
-        </Button>
-        
+        </Button>        
         <!-- b1.Click += OnButtonClick; -->
         <Button  Click="OnButtonClick" FontStyle="Italic" Background="#FF15BFBF" FontSize="20">Hello Campus02</Button>
         <CheckBox>Hello</CheckBox>
         <Calendar></Calendar>
-        
-        
+        <ToggleButton ToolTip="Hilfetext">Ein und Aus</ToggleButton>
+        <ToggleButton Content="ein Text">
+            <ToggleButton.ToolTip>
+                <StackPanel>
+                    <Label>Hier ist der Hilfetext</Label>
+                    <Calendar></Calendar>
+                </StackPanel>
+            </ToggleButton.ToolTip>
+        </ToggleButton>
+        <Expander Header="Infos">
+            <StackPanel>
+                <Button>Hello World</Button>
+            </StackPanel>
+        </Expander>
+
+        <GroupBox Header="Geschlecht">
+            <StackPanel>
+                <RadioButton Content="Frau"></RadioButton>
+                <RadioButton Content="Mann"></RadioButton>
+            </StackPanel>
+        </GroupBox>
+
+        <StackPanel>
+            <StackPanel>
+                <Label Content="Geschlecht"></Label>
+                <RadioButton Content="Frau"></RadioButton>
+                <RadioButton Content="Mann"></RadioButton>
+            </StackPanel>
+        </StackPanel>
+
+        <TabControl>
+            <TabItem Header="Tab 1">xyz</TabItem>
+            <TabItem Header="Tab 2">abc</TabItem>
+        </TabControl>
+        <ListBox>
+            <ListBox.Items>
+                <ListBoxItem>Hello</ListBoxItem>
+                <ListBoxItem>World</ListBoxItem>
+                <ListBoxItem>Campu2</ListBoxItem>
+            </ListBox.Items>
+        </ListBox>
+
     </StackPanel>
 </Window>
