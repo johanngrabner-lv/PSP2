@@ -5,15 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <TextBox>Erste Zahl</TextBox>
-        <TextBox>Zweite Zahl</TextBox>
-        <ListBox>
+        Title="{Binding HelloMessage}" Height="450" Width="800">
+    <StackPanel><!--kann auf Eigenschaft des DataContextes zugreifen this.DataContext = -->
+        <TextBox x:Name="txt1">Erste Zahl</TextBox>
+        <TextBox x:Name="txt2">Zweite Zahl</TextBox>
+        <ListBox x:Name="lstAdditionSub">
             <ListBoxItem>+</ListBoxItem>
             <ListBoxItem>-</ListBoxItem>
         </ListBox>
-        <Button>Berechnen</Button>
-        <Label>Ergebnis</Label>
+        <Button Click="btnCalc_Click" x:Name="btnCalc">Berechnen</Button><!-- beim Klick auf Berechnen Zahl 1 + / - Zahl 2 in das Ergebnis schreiben -->
+        <Label x:Name="lblErgebnis">Ergebnis</Label>
+        <!-- hier soll Begruessung angezeigt werden-->
+        <!--deklaratives Databinding-->
+        <Button Content="{Binding Begruessung}"></Button>
+        <TextBox Text="{Binding Vorname}"></TextBox>
+        <Label Content="{Binding HelloMessage}"></Label>
+        <Button Background="{Binding Vorname}">ein demotext</Button>
+        <TextBox Text="{Binding z1}"></TextBox>
+        <TextBox Text="{Binding z2}"></TextBox>
+        <TextBlock Text="{Binding ergebnis}"></TextBlock>
+        <Button Content="{Binding BegrEnglish}"></Button>
     </StackPanel>
 </Window>
