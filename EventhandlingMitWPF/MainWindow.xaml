@@ -6,8 +6,21 @@
         xmlns:local="clr-namespace:EventhandlingMitWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:Produkt Bezeichnubg="Handy" Preis="12" x:Key="12"/>
+    </Window.Resources>
     <StackPanel>
-        <TextBox Text="Bitte geben Sie Ihren Namen ein" x:Name="txtName"></TextBox>
+      
+        <ListBox x:Name="lstGeschlecht" SelectionChanged="lstGeschlecht_SelectionChanged">          
+                <ListBoxItem>
+                <StackPanel>
+                    <Button>Frau</Button>
+                </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>Mann</ListBoxItem>
+                <ListBoxItem>Divers</ListBoxItem>          
+        </ListBox>
+        <TextBox  Text="Bitte geben Sie Ihren Namen ein" x:Name="txtName"></TextBox>
         <Button Content="SayHello"  x:Name="einBegruessungsbutton" Click="einBegruessungsbutton_Click"></Button>
         <Label x:Name="Begruessung"></Label>
     </StackPanel>
