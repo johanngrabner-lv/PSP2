@@ -5,19 +5,21 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSP2ConsoleApp", "PSP2ConsoleApp\PSP2ConsoleApp.csproj", "{EC53AB51-D8E0-4B9C-82BF-E6E0FBE9E085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SayHelloWithDelegates", "SayHelloWithDelegates\SayHelloWithDelegates.csproj", "{2947E84F-17D4-4293-8EB3-A43A0BCD2097}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SayHelloWithDelegates", "SayHelloWithDelegates\SayHelloWithDelegates.csproj", "{2947E84F-17D4-4293-8EB3-A43A0BCD2097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Produktverwaltung", "Produktverwaltung\Produktverwaltung.csproj", "{EFAFE8AA-CAAD-421E-BE0A-65B12C60B532}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Produktverwaltung", "Produktverwaltung\Produktverwaltung.csproj", "{EFAFE8AA-CAAD-421E-BE0A-65B12C60B532}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonzertBeispiel", "KonzertBeispiel\KonzertBeispiel.csproj", "{DAB583EC-A20D-4626-B5F0-016102440D22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KonzertBeispiel", "KonzertBeispiel\KonzertBeispiel.csproj", "{DAB583EC-A20D-4626-B5F0-016102440D22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProduktVerwaltungMitEvents", "ProduktVerwaltungMitEvents\ProduktVerwaltungMitEvents.csproj", "{A2B06068-39B8-4FD9-9FD5-FF60B3496101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProduktVerwaltungMitEvents", "ProduktVerwaltungMitEvents\ProduktVerwaltungMitEvents.csproj", "{A2B06068-39B8-4FD9-9FD5-FF60B3496101}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProduktverwaltungMitEF", "ProduktverwaltungMitEF\ProduktverwaltungMitEF.csproj", "{B0CF948D-089D-4B80-A373-CE1AFD6361B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProduktverwaltungMitEF", "ProduktverwaltungMitEF\ProduktverwaltungMitEF.csproj", "{B0CF948D-089D-4B80-A373-CE1AFD6361B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppFramework", "ConsoleAppFramework\ConsoleAppFramework.csproj", "{7F67D844-13C0-46D3-8056-2E0EC8DBB77C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppFrameworkMitEF", "ConsoleAppFrameworkMitEF\ConsoleAppFrameworkMitEF.csproj", "{46C45657-CD08-4E8D-852C-D56190A804FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWPF", "HelloWPF\HelloWPF.csproj", "{93F8A301-AC0E-4D82-AB35-295D71F5AC30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{46C45657-CD08-4E8D-852C-D56190A804FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46C45657-CD08-4E8D-852C-D56190A804FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46C45657-CD08-4E8D-852C-D56190A804FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F8A301-AC0E-4D82-AB35-295D71F5AC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F8A301-AC0E-4D82-AB35-295D71F5AC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F8A301-AC0E-4D82-AB35-295D71F5AC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F8A301-AC0E-4D82-AB35-295D71F5AC30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,30 @@
+﻿<Window x:Class="HelloWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--UI wird deklarativ mit XAML (eXtended Application Markup language) entwickler, kann auch prozedural entwickelt werden-->
+    <StackPanel x:Name="MyFirstStackPanel" >
+        <Button>V1 - Content Implizit</Button>
+        <Button Content="V2 Explizit über Property"></Button>
+        <!--Property Element Syntax V3-->
+        <Button>
+            <Button.Content>
+                <StackPanel>
+                    <CheckBox>Check1</CheckBox>
+                    <Button>B1</Button>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        
+        <!-- b1.Click += OnButtonClick; -->
+        <Button  Click="OnButtonClick" FontStyle="Italic" Background="#FF15BFBF" FontSize="20">Hello Campus02</Button>
+        <CheckBox>Hello</CheckBox>
+        <Calendar></Calendar>
+        
+        
+    </StackPanel>
+</Window>
