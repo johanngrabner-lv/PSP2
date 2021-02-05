@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFDataBindingModesAndUpdateTrigger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFDataBindingModesAndUpdateTrigger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Background="{Binding ElementName=lstColors,Path=SelectedItem.Content}">
+        <TextBox Text="{Binding ProduktNr, Mode=OneTime }"/>
+        <TextBox Text="{Binding Path=Produktbezeichnung, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Text="{Binding Preis}"/>
+        <Label>Auswertung</Label>
+        <Label Content="{Binding ProduktNr}"/>
+        <Label Content="{Binding Produktbezeichnung}"/>
+        <Label Content="{Binding Preis}" Background="Aqua"/>
+        <ListBox x:Name="lstColors">
+            <ListBoxItem>Red</ListBoxItem>
+            <ListBoxItem>Green</ListBoxItem>
+            <ListBoxItem>Blue</ListBoxItem>
+        </ListBox>
+        <Button Content="{Binding ElementName=lstColors,Path=SelectedItem.Content}"/>
+    </StackPanel>
+</Window>

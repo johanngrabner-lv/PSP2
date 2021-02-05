@@ -8,12 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <!-- XAML - Markup GUI Layout, Content, Input, Headered Conten, Items,-->
     <StackPanel>
+        <Button Background="Red" >Hello</Button>
         <ComboBox ItemsSource="{Binding Sprueche}" Background="{Binding Farbe}"/>
-        <Image  Source="{Binding BildDesTages}"></Image>
+        <Image Width="{Binding ElementName=mySlider, Path=Value}"  Source="{Binding BildDesTages}"></Image>
         <Button Click="Button_Click">Spruch des Tages</Button>
         <Label x:Name="lblBegruessung" Content="{Binding Spruch}"></Label>
         <TextBox Text="{Binding Spruch}"/>
-        <Button Content="{Binding BildDesTages}" Background="{Binding Farbe}"/>
-
+        <Button Content="{Binding  BildDesTages}" Background="{Binding Farbe}"/>
+        <Slider Minimum="200" Maximum="400" x:Name="mySlider"></Slider>
+        <Label Content="{Binding ElementName=mySlider,Path=Value}"/>
     </StackPanel>
 </Window>
