@@ -31,6 +31,7 @@ namespace KinofilmeWPF
             kinofilm.Erscheinungsjahr = "2020 Jahr";
             kinofilm.Genre = kinofilm.GenreAuswahl[0];
             kinofilm.Sterne = 8;
+            kinofilm.GenreAuswahl.Add("Drama");
             this.DataContext = kinofilm;
         }
     }
