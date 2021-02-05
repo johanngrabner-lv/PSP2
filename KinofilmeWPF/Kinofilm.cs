@@ -8,6 +8,14 @@ namespace KinofilmeWPF
 {
     class Kinofilm
     {
+        public Kinofilm()
+        {
+            GenreAuswahl = new List<string>();
+            GenreAuswahl.Add("Fantasie");
+            GenreAuswahl.Add("Komödie");
+            GenreAuswahl.Add("Action");
+        }
+        public List<string> GenreAuswahl { get; set; }
         public string Titel { get; set; }
         public string Erscheinungsjahr { get; set; }
 
