@@ -8,8 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <TextBox Text="{Binding Titel, UpdateSourceTrigger=PropertyChanged}"/>
-        <Label>Auswert</Label>
+        <TextBox Text="{Binding Erscheinungsjahr}"/>
+        <Label>Auswertung</Label>
         <!-- Tow way Databinding-->
         <Label Content="{Binding Titel}"/>
+        <Label Content="{Binding Erscheinungsjahr}"/>
     </StackPanel>
 </Window>
