@@ -58,6 +58,10 @@ namespace WPFCalculator
             }
         }
 
+        //'+'/'*
+        public string MathOperator { get; set; }
+
+
         private int _Z2;
 
         public int z2

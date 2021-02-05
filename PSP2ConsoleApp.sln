@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventhandlingMitWPF", "Even
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFCalculator", "WPFCalculator\WPFCalculator.csproj", "{57BD75FD-D915-4562-B9DC-BB93C112C545}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekendWPF", "WeekendWPF\WeekendWPF.csproj", "{3FF633D6-C5FB-406A-BF2C-D88FD03B97D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{57BD75FD-D915-4562-B9DC-BB93C112C545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57BD75FD-D915-4562-B9DC-BB93C112C545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57BD75FD-D915-4562-B9DC-BB93C112C545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF633D6-C5FB-406A-BF2C-D88FD03B97D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF633D6-C5FB-406A-BF2C-D88FD03B97D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF633D6-C5FB-406A-BF2C-D88FD03B97D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF633D6-C5FB-406A-BF2C-D88FD03B97D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
