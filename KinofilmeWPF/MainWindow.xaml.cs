@@ -23,6 +23,9 @@ namespace KinofilmeWPF
         public MainWindow()
         {
             InitializeComponent();
+
+            Kinofilm kinofilm = new Kinofilm();
+            this.DataContext = kinofilm;
         }
     }
 }
