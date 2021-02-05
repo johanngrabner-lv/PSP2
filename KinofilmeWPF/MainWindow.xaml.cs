@@ -25,6 +25,12 @@ namespace KinofilmeWPF
             InitializeComponent();
 
             Kinofilm kinofilm = new Kinofilm();
+
+            //Defaultwerte setzen
+            kinofilm.Titel = "Bitte Titel eingeben";
+            kinofilm.Erscheinungsjahr = "2020 Jahr";
+            kinofilm.Genre = kinofilm.GenreAuswahl[0];
+            kinofilm.Sterne = 8;
             this.DataContext = kinofilm;
         }
     }
