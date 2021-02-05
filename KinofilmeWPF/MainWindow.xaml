@@ -10,6 +10,7 @@
         <TextBox Text="{Binding Titel, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Text="{Binding Erscheinungsjahr}"/>
         <ListBox ItemsSource="{Binding GenreAuswahl}" Width="{Binding Hoehe}" SelectedItem="{Binding Genre}"/>
+        <Slider Minimum="0" Maximum="10" Value="{Binding Sterne}"/>
         <Label>Auswertung</Label>
         <!-- Tow way Databinding-->
         <Label Content="{Binding Titel}"/>
