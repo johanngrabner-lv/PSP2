@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekendWPF", "WeekendWPF\We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDataBindingModesAndUpdateTrigger", "WPFDataBindingModesAndUpdateTrigger\WPFDataBindingModesAndUpdateTrigger.csproj", "{3EEE6BB0-8E77-40FB-B068-47D723B8AF6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinofilmeWPF", "KinofilmeWPF\KinofilmeWPF.csproj", "{E5D53D58-53A5-4C00-B2B5-08C596ADE920}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{3EEE6BB0-8E77-40FB-B068-47D723B8AF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EEE6BB0-8E77-40FB-B068-47D723B8AF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EEE6BB0-8E77-40FB-B068-47D723B8AF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D53D58-53A5-4C00-B2B5-08C596ADE920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D53D58-53A5-4C00-B2B5-08C596ADE920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D53D58-53A5-4C00-B2B5-08C596ADE920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D53D58-53A5-4C00-B2B5-08C596ADE920}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
