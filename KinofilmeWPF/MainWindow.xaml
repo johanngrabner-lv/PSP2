@@ -9,6 +9,7 @@
     <StackPanel>
         <TextBox Text="{Binding Titel, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Text="{Binding Erscheinungsjahr}"/>
+        <ListBox ItemsSource="{Binding GenreAuswahl}"/>
         <Label>Auswertung</Label>
         <!-- Tow way Databinding-->
         <Label Content="{Binding Titel}"/>
