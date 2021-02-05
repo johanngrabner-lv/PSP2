@@ -8,9 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
     <!-- XAML - Markup GUI Layout, Content, Input, Headered Conten, Items,-->
     <StackPanel>
-        <Image  Source="{Binding BildDesTage}"></Image>
+        <ComboBox ItemsSource="{Binding Sprueche}" Background="{Binding Farbe}"/>
+        <Image  Source="{Binding BildDesTages}"></Image>
         <Button Click="Button_Click">Spruch des Tages</Button>
         <Label x:Name="lblBegruessung" Content="{Binding Spruch}"></Label>
-        
+        <TextBox Text="{Binding Spruch}"/>
+        <Button Content="{Binding BildDesTages}" Background="{Binding Farbe}"/>
+
     </StackPanel>
 </Window>

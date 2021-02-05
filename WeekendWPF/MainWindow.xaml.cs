@@ -21,6 +21,8 @@ namespace WeekendWPF
     public partial class MainWindow : Window
     {
         Freitag freitag = new Freitag();
+
+        Freitag montag = new Freitag();
         public MainWindow()
         {
             InitializeComponent();
@@ -29,15 +31,25 @@ namespace WeekendWPF
             freitag.Sprueche.Add("Bald ist Wochenende");
             freitag.Sprueche.Add("Fasst geschafft");
             freitag.Sprueche.Add("Frühling");
+            freitag.Farbe = "Green";
 
             freitag.Bilder = new List<string>();
             freitag.Bilder.Add("Winter.jpg");
             freitag.Bilder.Add("Fruehling.jpg");
+
+            this.DataContext = freitag; //Link zwischen XAML und Object, View und Model 
+
+            /*
+            montag.Sprueche = new List<string>();
+            montag.Sprueche.Add("Oje, Montag :-( ");
+            this.DataContext = montag;
+            */
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            lblBegruessung.Content = freitag.Spruch;
+            freitag.Refresh();
+            //lblBegruessung.Content = freitag.Spruch;
             //Bild.Source = new ImageSource()
         }
     }
