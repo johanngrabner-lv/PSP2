@@ -9,6 +9,7 @@
     <StackPanel>
         <TextBox Text="{Binding Titel, UpdateSourceTrigger=PropertyChanged}"/>
         <Label>Auswert</Label>
+        <!-- Tow way Databinding-->
         <Label Content="{Binding Titel}"/>
     </StackPanel>
 </Window>
