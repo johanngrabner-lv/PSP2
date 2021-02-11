@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <TextBlock Text="{Binding Frage}"/>
+        <TextBlock Text="{Binding Frage}"></TextBlock>
         <TextBlock Text="{Binding Antwort1}"/>
         <TextBlock Text="{Binding Antwort2}"/>
         <TextBlock Text="{Binding Antwort3}"/>
         <TextBlock Text="{Binding Antwort4}"/>
-        <TextBox Text="{Binding Eingabe}"/>
+        <TextBox Text="{Binding Eingabe, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Text="{Binding Ergebnis}"/>
     </StackPanel>
 </Window>
