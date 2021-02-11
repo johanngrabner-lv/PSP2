@@ -8,13 +8,27 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <!--Attached Property - ererbt von DockPanel-->
-        <Menu Background="Red">
+        <Menu Background="Red" DockPanel.Dock="Top">
             <MenuItem Header="Datei">
                 <MenuItem Header="Öffnen">                    
                 </MenuItem>
                 <MenuItem Header="Beenden"></MenuItem>
             </MenuItem>
         </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>Heute ist der 11.02.2021</StatusBarItem>
+        </StatusBar>
+        <ListBox DockPanel.Dock="Left">
+            <ListBoxItem>Red</ListBoxItem>
+            <ListBoxItem>Green</ListBoxItem>
+            <ListBoxItem>Blue</ListBoxItem>
+        </ListBox>
+        <StackPanel>
+            <Button>Hello World</Button>
+            <TextBox>Hello Campus02</TextBox>
+            
+            
+        </StackPanel>
         
     </DockPanel>
 </Window>
