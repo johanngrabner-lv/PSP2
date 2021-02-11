@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutcotainerSample", "Lay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MillionenshowWPF", "MillionenshowWPF\MillionenshowWPF.csproj", "{B55DCF63-8565-471B-B0B9-0BE1FD1CBF9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatheWPF", "MatheWPF\MatheWPF.csproj", "{FEFF699C-4004-4247-B72F-BE78D7A997D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{B55DCF63-8565-471B-B0B9-0BE1FD1CBF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B55DCF63-8565-471B-B0B9-0BE1FD1CBF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B55DCF63-8565-471B-B0B9-0BE1FD1CBF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFF699C-4004-4247-B72F-BE78D7A997D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFF699C-4004-4247-B72F-BE78D7A997D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFF699C-4004-4247-B72F-BE78D7A997D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFF699C-4004-4247-B72F-BE78D7A997D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

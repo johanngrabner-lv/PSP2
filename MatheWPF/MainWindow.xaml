@@ -1,0 +1,19 @@
+﻿<Window x:Class="MatheWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatheWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock>15</TextBlock>
+        <TextBlock>+</TextBlock>
+        <TextBlock>3</TextBlock>
+        <TextBox></TextBox>
+        <TextBox></TextBox>
+        <ToggleButton x:Name="myToggleButton" IsChecked="{Binding WurdeGeandert}" >Drücken</ToggleButton>
+        <TextBlock Text="{Binding ElementName=myToggleButton, Path=IsChecked}"/>
+        <Button Click="Button_Click">Neue Frage</Button>
+    </StackPanel>
+</Window>
