@@ -6,10 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfNet
+namespace LayoutcotainerSample
 {
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// Interaktionslogik für "App.xaml"
     /// </summary>
     public partial class App : Application
     {

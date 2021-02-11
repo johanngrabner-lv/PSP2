@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDataBindingModesAndUpdat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinofilmeWPF", "KinofilmeWPF\KinofilmeWPF.csproj", "{E5D53D58-53A5-4C00-B2B5-08C596ADE920}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoDonnerstag", "DemoDonnerstag\DemoDonnerstag.csproj", "{07607AF0-E7EA-4F4F-AAB0-B2108FC4C024}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutcotainerSample", "LayoutcotainerSample\LayoutcotainerSample.csproj", "{8313DB3A-2A01-4B7D-AAEF-3AEE64C1C3F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{E5D53D58-53A5-4C00-B2B5-08C596ADE920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5D53D58-53A5-4C00-B2B5-08C596ADE920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5D53D58-53A5-4C00-B2B5-08C596ADE920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07607AF0-E7EA-4F4F-AAB0-B2108FC4C024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07607AF0-E7EA-4F4F-AAB0-B2108FC4C024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07607AF0-E7EA-4F4F-AAB0-B2108FC4C024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07607AF0-E7EA-4F4F-AAB0-B2108FC4C024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8313DB3A-2A01-4B7D-AAEF-3AEE64C1C3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8313DB3A-2A01-4B7D-AAEF-3AEE64C1C3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8313DB3A-2A01-4B7D-AAEF-3AEE64C1C3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8313DB3A-2A01-4B7D-AAEF-3AEE64C1C3F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
