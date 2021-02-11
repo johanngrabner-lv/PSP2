@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <!--Attached Property - ererbt von DockPanel-->
-        <Menu Background="Red" DockPanel.Dock="Top">
+        <Menu Background="Red" DockPanel.Dock="Top" x:Name="myMenu">
             <MenuItem Header="Datei">
                 <MenuItem Header="Öffnen">                    
                 </MenuItem>
@@ -18,16 +18,37 @@
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem>Heute ist der 11.02.2021</StatusBarItem>
         </StatusBar>
-        <ListBox DockPanel.Dock="Left">
+        <ListBox SelectedItem="{Binding AusgewaehlteFarbe}" x:Name="myColorListbox" DockPanel.Dock="Left" SelectionChanged="ListBox_SelectionChanged">
             <ListBoxItem>Red</ListBoxItem>
             <ListBoxItem>Green</ListBoxItem>
             <ListBoxItem>Blue</ListBoxItem>
         </ListBox>
         <StackPanel>
-            <Button>Hello World</Button>
-            <TextBox>Hello Campus02</TextBox>
-            
-            
+            <Button Background="{Binding ElementName=myColorListbox, Path=SelectedItem.Content }">Hello World</Button>
+            <TextBox Background="{Binding AusgewaehlteFarbe}">Hello Campus02</TextBox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0">ID</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0">Bezeichnung</TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="0">Preis</TextBlock>
+                <TextBox Grid.Column="0" Grid.Row="1">17</TextBox>
+                <TextBox Grid.Column="1" Grid.Row="1">Handy</TextBox>
+                <TextBox Grid.Column="2" Grid.Row="1">99</TextBox>
+                <TextBox Grid.Column="0" Grid.Row="2">23</TextBox>
+                <TextBox Grid.Column="1" Grid.Row="2">Sessel</TextBox>
+                <TextBox Grid.Column="2" Grid.Row="2">250</TextBox>
+            </Grid>
+
         </StackPanel>
         
     </DockPanel>
