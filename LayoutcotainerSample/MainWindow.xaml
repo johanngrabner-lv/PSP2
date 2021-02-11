@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <!--Attached Property - ererbt von DockPanel-->
-        <Menu Background="Red" DockPanel.Dock="Top" x:Name="myMenu">
+        <Menu Background="Red" DockPanel.Dock="Top">
             <MenuItem Header="Datei">
                 <MenuItem Header="Öffnen">                    
                 </MenuItem>
@@ -18,14 +18,14 @@
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem>Heute ist der 11.02.2021</StatusBarItem>
         </StatusBar>
-        <ListBox SelectedItem="{Binding AusgewaehlteFarbe}" x:Name="myColorListbox" DockPanel.Dock="Left" SelectionChanged="ListBox_SelectionChanged">
+        <ListBox DockPanel.Dock="Left">
             <ListBoxItem>Red</ListBoxItem>
             <ListBoxItem>Green</ListBoxItem>
             <ListBoxItem>Blue</ListBoxItem>
         </ListBox>
         <StackPanel>
-            <Button Background="{Binding ElementName=myColorListbox, Path=SelectedItem.Content }">Hello World</Button>
-            <TextBox Background="{Binding AusgewaehlteFarbe}">Hello Campus02</TextBox>
+            <Button >Hello World</Button>
+            <TextBox>Hello Campus02</TextBox>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
