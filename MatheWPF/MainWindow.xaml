@@ -7,13 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <TextBlock>15</TextBlock>
+        <TextBlock Text="{Binding ZZ1, Mode=OneWay}">15</TextBlock>
         <TextBlock>+</TextBlock>
-        <TextBlock>3</TextBlock>
-        <TextBox></TextBox>
-        <TextBox></TextBox>
+        <TextBlock Text="{Binding ZZ2}">3</TextBlock>
+        <TextBox Text="{Binding Eingabe, Mode=OneWayToSource }"></TextBox>
+        <TextBox Text="{Binding Ergebnis}"></TextBox>
         <ToggleButton x:Name="myToggleButton" IsChecked="{Binding WurdeGeandert}" >Drücken</ToggleButton>
         <TextBlock Text="{Binding ElementName=myToggleButton, Path=IsChecked}"/>
         <Button Click="Button_Click">Neue Frage</Button>
+        <TextBlock Text="{Binding Eingabe}"/>
     </StackPanel>
 </Window>
