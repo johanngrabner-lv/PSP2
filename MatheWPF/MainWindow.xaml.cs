@@ -22,9 +22,14 @@ namespace MatheWPF
     {
 
         //DataContext ctx
+        MatheModell m = new MatheModell();
         public MainWindow()
         {
             InitializeComponent();
+            m.Eingabe = "0";
+            m.GenerateRandomNumbers();
+            
+            this.DataContext = m;
 
             //DataContext --- z1, z2, eingabe, richtigFalsch,   GesamtRichtig / GesamtFalsch --- 10 von 15 Fragen richtig
         }
@@ -33,6 +38,11 @@ namespace MatheWPF
         {
             //ctx.GenerateRandomNumbers();
             //ctx.NewQuestion();
+
+            if (int.Parse(m.Eingabe) == m.ZZ1 + m.ZZ2)
+                m.GesamtRichtig++;
+
+            m.GenerateRandomNumbers();
         }
     }
 }

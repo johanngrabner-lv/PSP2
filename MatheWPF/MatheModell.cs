@@ -11,13 +11,26 @@ namespace MatheWPF
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private int _GesamtRichtig;
+        public int GesamtRichtig
+        {
+            get { return _GesamtRichtig; }
+            set
+            {
+                _GesamtRichtig = value;
+                RaisePropertyChanged("GesamtRichtig");
+              
+            }
+
+        }
         private int _ZZ1;
-        public int ZZ
+        public int ZZ1
         {
             get { return _ZZ1; }
             set {             
                 _ZZ1 = value;
                 RaisePropertyChanged("ZZ1");
+                RaisePropertyChanged("Ergebnis");
             }
         }
         private int _ZZ2;
@@ -28,28 +41,43 @@ namespace MatheWPF
             {
                 _ZZ2 = value;
                 RaisePropertyChanged("ZZ2");
+                RaisePropertyChanged("Ergebnis");
             }
         }
 
-        private int _Eregebnis;
-        public int Eregebnis
+        private string _Ergebnis;
+        public string Ergebnis
         {
-            get { return _Eregebnis; }
+            get {
+                int z;
+                bool erfolgreich = int.TryParse(Eingabe, out z);
+                if (erfolgreich && z == ZZ1 + ZZ2)
+                {
+                    return "Super richtig";
+                }
+                else
+                {
+                    return "Leider falsch";
+                }
+            
+            
+            }
             set
             {
-                _Eregebnis = value;
-                RaisePropertyChanged("Eregebnis");
+                _Ergebnis = value;
+                RaisePropertyChanged("Ergebnis");
             }
         }
 
-        private int _Eingabe;
-        public int Eingabe
+        private string _Eingabe;
+        public string Eingabe
         {
             get { return _Eingabe; }
             set
             {
                 _Eingabe = value;
                 RaisePropertyChanged("Eingabe");
+                RaisePropertyChanged("Ergebnis");
             }
         }
 
@@ -77,6 +105,15 @@ namespace MatheWPF
                 //15:20 Uhr
             
             }
+        }
+
+        public void GenerateRandomNumbers()
+        {
+            Random r = new Random();
+
+            ZZ1 = r.Next(0, 11);
+            ZZ2 = r.Next(0, 11);
+
         }
 
     }
