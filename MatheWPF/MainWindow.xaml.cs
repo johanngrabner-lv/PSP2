@@ -31,6 +31,7 @@ namespace MatheWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //ctx.GenerateRandomNumbers();
             //ctx.NewQuestion();
         }
     }
