@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LayoutcotainerSample
+namespace MillionenshowWPF
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
@@ -24,9 +24,18 @@ namespace LayoutcotainerSample
         {
             InitializeComponent();
 
-            
-           
-        }
+            MillionenFrageUndAntworten frageUndAntworten = new MillionenFrageUndAntworten();            
+            frageUndAntworten.Frage = "Hauptstadt von Österreich";
+            frageUndAntworten.Antwort1 = "Graz";
+            frageUndAntworten.Antwort2 = "Wien";
+            frageUndAntworten.Antwort3 = "New York";
+            frageUndAntworten.Antwort4 = "Dornbirn";
 
+            frageUndAntworten.KorrekteAntwort = "Wien";
+
+
+            this.DataContext = frageUndAntworten;
+
+        }
     }
 }
