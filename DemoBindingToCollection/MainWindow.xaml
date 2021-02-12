@@ -8,7 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <ListBox ItemsSource="{Binding MeineProdukte}" DockPanel.Dock="Left">
-            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding ProduktID}"/>
+                        <TextBlock Text="{Binding Bezeichnung}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel>
             <TextBlock>Produktdetails</TextBlock>
