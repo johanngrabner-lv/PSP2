@@ -18,6 +18,10 @@
             <StatusBarItem Content="{Binding GesamtRichtig}"></StatusBarItem>
             <StatusBarItem>Falsch:</StatusBarItem>
             <StatusBarItem Content="{Binding GesamtFalsch}"></StatusBarItem>
+            <StatusBarItem>Gesamt Addition:</StatusBarItem>
+            <StatusBarItem Content="{Binding GesamtAddition}"></StatusBarItem>
+            <StatusBarItem>Gesamt Subtraktion:</StatusBarItem>
+            <StatusBarItem Content="{Binding GesamtSubtraktion}"></StatusBarItem>
         </StatusBar>
         <StackPanel>
             <UniformGrid Rows="3" Columns="3" Background="Thistle" Margin="5 5 5 55">
@@ -25,7 +29,7 @@
                 <TextBlock>Operator</TextBlock>
                 <TextBlock>Zufällige Zahl2</TextBlock>
                 <TextBlock Text="{Binding ZZ1, Mode=OneWay}"></TextBlock>
-                <TextBlock>+</TextBlock>
+                <TextBlock Text="{Binding Operator}"></TextBlock>
                 <TextBlock Text="{Binding ZZ2}"></TextBlock>
                 <TextBox Text="{Binding Eingabe, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged }"></TextBox>
                 <TextBox Text="{Binding Ergebnis}"></TextBox>

@@ -11,6 +11,10 @@ namespace MatheWPF
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public MatheModell()
+        {
+            Eingabe = "0";
+        }
         private int _GesamtRichtig;
         public int GesamtRichtig
         {
@@ -32,9 +36,29 @@ namespace MatheWPF
             {
                 _GesamtFalsch = value;
                 RaisePropertyChanged("GesamtFalsch");
-
             }
+        }
 
+        private int _GesamtAddition;
+        public int GesamtAddition
+        {
+            get { return _GesamtAddition; }
+            set
+            {
+                _GesamtAddition = value;
+                RaisePropertyChanged("GesamtAddition");
+            }
+        }
+
+        private int _GesamtSubtraktion;
+        public int GesamtSubtraktion
+        {
+            get { return _GesamtSubtraktion; }
+            set
+            {
+                _GesamtSubtraktion = value;
+                RaisePropertyChanged("GesamtSubtraktion");
+            }
         }
         private int _ZZ1;
         public int ZZ1
@@ -61,19 +85,10 @@ namespace MatheWPF
         private string _Ergebnis;
         public string Ergebnis
         {
-            get {
-                int z;
-                bool erfolgreich = int.TryParse(Eingabe, out z);
-                if (erfolgreich && z == ZZ1 + ZZ2)
-                {
-                    return "Super richtig";
-                }
-                else
-                {
-                    return "Leider falsch";
-                }
-            
-            
+            get
+            {
+                var ergebnis = (CheckAnswer()) ? "super richtig" : "leider falsch";
+                return ergebnis;
             }
             set
             {
@@ -90,6 +105,18 @@ namespace MatheWPF
             {
                 _Eingabe = value;
                 RaisePropertyChanged("Eingabe");
+                RaisePropertyChanged("Ergebnis");
+            }
+        }
+
+        private string _Operator;
+        public string Operator
+        {
+            get { return _Operator; }
+            set
+            {
+                _Operator = value;
+                RaisePropertyChanged("Operator");
                 RaisePropertyChanged("Ergebnis");
             }
         }
@@ -120,17 +147,31 @@ namespace MatheWPF
             }
         }
 
-        public void CheckAnswer()
+        public bool CheckAnswer()
         {
             //0. Aufgabe vertraut machen mit Sourcecode
             //1. Aufgabe - Operator soll "zufällig werden"  entweder + or - 
             //Property "Operator" --> Random
             //2. Aufgabe - Statuszeile erweitern Anzahl Additionen: 5, Anzahl Subtraktionen: 2
+            //30 Minuten - Programmieren
+            //20 Minuten Pause
+            //10:00 Uhr Auflösung
 
-            if (int.Parse(Eingabe) == ZZ1 + ZZ2)
-                GesamtRichtig++;
-            else
-                GesamtFalsch++;
+            int eingabeInt = 0;
+            if (int.TryParse(Eingabe, out eingabeInt))
+            {
+
+                if ((Operator == "+" && eingabeInt == ZZ1 + ZZ2) || (Operator == "-" && eingabeInt == ZZ1 - ZZ2))
+                {                   
+                    return true;
+                }
+                else
+                {                   
+                    return false;
+                }
+            }
+
+            return false;
         }
         public void GenerateRandomNumbers()
         {
@@ -141,11 +182,30 @@ namespace MatheWPF
 
         }
 
+        public void GenerateRandomOperator()
+        {
+            Random r = new Random();
+
+            var operatorNumber = r.Next(0, 2);
+
+            Operator = (operatorNumber == 0) ? "+" : "-";
+
+            if (Operator == "-")
+                GesamtSubtraktion++;
+            else
+                _GesamtAddition++;
+
+        }
+
         public void ResetGame()
         {
+            Eingabe = "0";
             GesamtRichtig = 0;
             GesamtFalsch = 0;
+            GesamtSubtraktion = 0;
+            GesamtAddition = 0;
             GenerateRandomNumbers();
+            GenerateRandomOperator();
         }
 
     }

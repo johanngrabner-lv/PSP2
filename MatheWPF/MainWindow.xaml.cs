@@ -26,8 +26,8 @@ namespace MatheWPF
         public MainWindow()
         {
             InitializeComponent();
-            m.Eingabe = "0";
-            m.GenerateRandomNumbers();
+            
+            m.ResetGame();
             
             this.DataContext = m;
 
@@ -39,9 +39,16 @@ namespace MatheWPF
             //ctx.GenerateRandomNumbers();
             //ctx.NewQuestion();
 
-            m.CheckAnswer();
-
+            if ( m.CheckAnswer()==true)
+            {
+                m.GesamtRichtig++;
+            }
+            else
+            {
+                m.GesamtFalsch++;
+            }
             m.GenerateRandomNumbers();
+            m.GenerateRandomOperator();
         }
 
         private void NeuesSpielStarten(object sender, RoutedEventArgs e)
