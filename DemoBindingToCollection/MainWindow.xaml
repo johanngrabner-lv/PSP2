@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
+        <!--Bindung to Observable-Collection-->
         <ListBox ItemsSource="{Binding MeineProdukte}" DockPanel.Dock="Left">
             <ListBox.ItemTemplate>
+                <!-- define view of object-->
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding ProduktID}"/>
+                        <TextBlock Text="{Binding ProduktId}"/>
                         <TextBlock Text="{Binding Bezeichnung}"/>
+                        <Image Source="{Binding Abbildung}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

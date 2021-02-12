@@ -33,7 +33,7 @@ namespace DemoBindingToCollection
                    ProduktId = 6,
                    Preis = 99,
                    Bezeichnung = "Handy",
-                   Abbildung = "ABC.jpg"
+                   Abbildung = "Motorola.jpg"
                });
         }
     }
