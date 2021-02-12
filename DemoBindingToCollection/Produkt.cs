@@ -15,5 +15,10 @@ namespace DemoBindingToCollection
         public double Preis { get; set; }
 
         public string Abbildung { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ProduktId} -{Bezeichnung}";
+        }
     }
 }
