@@ -122,6 +122,11 @@ namespace MatheWPF
 
         public void CheckAnswer()
         {
+            //0. Aufgabe vertraut machen mit Sourcecode
+            //1. Aufgabe - Operator soll "zufällig werden"  entweder + or - 
+            //Property "Operator" --> Random
+            //2. Aufgabe - Statuszeile erweitern Anzahl Additionen: 5, Anzahl Subtraktionen: 2
+
             if (int.Parse(Eingabe) == ZZ1 + ZZ2)
                 GesamtRichtig++;
             else
