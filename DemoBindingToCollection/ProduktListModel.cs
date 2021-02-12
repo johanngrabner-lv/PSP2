@@ -47,12 +47,16 @@ namespace DemoBindingToCollection
             //INotifyCollectionChanged
             //oder ObservableCollection
             //Kopie des neuen Produktes
+            //MeineProdukte.Add(NeuesProdukt); --> Fehler würde eine Referenz hinzufügen
             Produkt pNeu = new Produkt();
             pNeu.Bezeichnung = NeuesProdukt.Bezeichnung;
             pNeu.ProduktId = NeuesProdukt.ProduktId;
             pNeu.Preis = NeuesProdukt.Preis;
 
+            //In-Memory-Liste
             MeineProdukte.Add(pNeu);
+
+            //Add to Table - Persistence mit Entity Framework
         }
     }
 }
