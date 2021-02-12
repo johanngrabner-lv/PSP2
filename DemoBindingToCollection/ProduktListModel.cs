@@ -44,8 +44,15 @@ namespace DemoBindingToCollection
 
         internal void AddNewProdukt()
         {
+            //INotifyCollectionChanged
+            //oder ObservableCollection
+            //Kopie des neuen Produktes
+            Produkt pNeu = new Produkt();
+            pNeu.Bezeichnung = NeuesProdukt.Bezeichnung;
+            pNeu.ProduktId = NeuesProdukt.ProduktId;
+            pNeu.Preis = NeuesProdukt.Preis;
 
-            MeineProdukte.Add(NeuesProdukt);
+            MeineProdukte.Add(pNeu);
         }
     }
 }
