@@ -20,9 +20,12 @@ namespace DemoBindingToCollection
     /// </summary>
     public partial class MainWindow : Window
     {
+        ProduktListModel dataContext = new ProduktListModel();
         public MainWindow()
         {
             InitializeComponent();
+            dataContext.FillSamples();
+            this.DataContext = dataContext;
         }
     }
 }

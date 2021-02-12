@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:DemoBindingToCollection"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <ListBox ItemsSource="{Binding MeineProdukte}" DockPanel.Dock="Left">
+            
+        </ListBox>
+        <StackPanel>
+            <TextBlock>Produktdetails</TextBlock>
+        </StackPanel>
+    </DockPanel>
 </Window>

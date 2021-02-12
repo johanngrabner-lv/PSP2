@@ -10,7 +10,31 @@ namespace DemoBindingToCollection
     class ProduktListModel
     {
         //public List<Produkt> MeineProdukte{ get; set; }
+        
+        //Implements 
+        public ObservableCollection<Produkt> 
+            MeineProdukte { get; set; }
 
-        public ObservableCollection<Produkt> MeineProdukte { get; set; }
+        public ProduktListModel()
+        {
+            MeineProdukte = new ObservableCollection<Produkt>();
+        }
+
+        internal void FillSamples()
+        {
+            MeineProdukte.Add(
+                new Produkt() { ProduktId = 1, Preis = 12, 
+                Bezeichnung = "Kugelschreiber", Abbildung = "Kugelschreiber.jpg" 
+                });
+
+            MeineProdukte.Add(
+               new Produkt()
+               {
+                   ProduktId = 6,
+                   Preis = 99,
+                   Bezeichnung = "Handy",
+                   Abbildung = "ABC.jpg"
+               });
+        }
     }
 }
