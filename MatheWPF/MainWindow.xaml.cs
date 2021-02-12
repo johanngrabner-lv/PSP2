@@ -39,10 +39,17 @@ namespace MatheWPF
             //ctx.GenerateRandomNumbers();
             //ctx.NewQuestion();
 
-            if (int.Parse(m.Eingabe) == m.ZZ1 + m.ZZ2)
-                m.GesamtRichtig++;
+            m.CheckAnswer();
 
             m.GenerateRandomNumbers();
         }
+
+        private void NeuesSpielStarten(object sender, RoutedEventArgs e)
+        {
+            m.ResetGame();
+            //Check GesamtRichtig --> 0
+        }
+
+     
     }
 }

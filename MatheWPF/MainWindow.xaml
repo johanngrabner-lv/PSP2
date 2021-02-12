@@ -6,16 +6,31 @@
         xmlns:local="clr-namespace:MatheWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <TextBlock Text="{Binding ZZ1, Mode=OneWay}"></TextBlock>
-        <TextBlock>+</TextBlock>
-        <TextBlock Text="{Binding ZZ2}"></TextBlock>
-        <TextBox Text="{Binding Eingabe, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged }"></TextBox>
-        <TextBox Text="{Binding Ergebnis}"></TextBox>
-        <ToggleButton x:Name="myToggleButton" IsChecked="{Binding WurdeGeandert}" >Drücken</ToggleButton>
-        <TextBlock Text="{Binding ElementName=myToggleButton, Path=IsChecked}"/>
-        <Button Click="Button_Click">Neue Frage</Button>
-        <TextBlock Text="{Binding Eingabe}"/>
-        <TextBlock Text="{Binding GesamtRichtig}"/>
-    </StackPanel>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Neues Spiel" Click="NeuesSpielStarten" ></MenuItem>
+                <MenuItem Header="Beenden"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>Richtig:</StatusBarItem>
+            <StatusBarItem Content="{Binding GesamtRichtig}"></StatusBarItem>
+            <StatusBarItem>Falsch:</StatusBarItem>
+            <StatusBarItem Content="{Binding GesamtFalsch}"></StatusBarItem>
+        </StatusBar>
+        <StackPanel>
+            <UniformGrid Rows="3" Columns="3" Background="Thistle" Margin="5 5 5 55">
+                <TextBlock>Zufällige Zahl1</TextBlock>
+                <TextBlock>Operator</TextBlock>
+                <TextBlock>Zufällige Zahl2</TextBlock>
+                <TextBlock Text="{Binding ZZ1, Mode=OneWay}"></TextBlock>
+                <TextBlock>+</TextBlock>
+                <TextBlock Text="{Binding ZZ2}"></TextBlock>
+                <TextBox Text="{Binding Eingabe, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged }"></TextBox>
+                <TextBox Text="{Binding Ergebnis}"></TextBox>
+                <Button Click="Button_Click">Neue Frage</Button>
+            </UniformGrid>
+        </StackPanel>
+    </DockPanel>
 </Window>

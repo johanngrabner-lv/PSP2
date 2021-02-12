@@ -23,6 +23,19 @@ namespace MatheWPF
             }
 
         }
+
+        private int _GesamtFalsch;
+        public int GesamtFalsch
+        {
+            get { return _GesamtFalsch; }
+            set
+            {
+                _GesamtFalsch = value;
+                RaisePropertyChanged("GesamtFalsch");
+
+            }
+
+        }
         private int _ZZ1;
         public int ZZ1
         {
@@ -107,6 +120,13 @@ namespace MatheWPF
             }
         }
 
+        public void CheckAnswer()
+        {
+            if (int.Parse(Eingabe) == ZZ1 + ZZ2)
+                GesamtRichtig++;
+            else
+                GesamtFalsch++;
+        }
         public void GenerateRandomNumbers()
         {
             Random r = new Random();
@@ -114,6 +134,13 @@ namespace MatheWPF
             ZZ1 = r.Next(0, 11);
             ZZ2 = r.Next(0, 11);
 
+        }
+
+        public void ResetGame()
+        {
+            GesamtRichtig = 0;
+            GesamtFalsch = 0;
+            GenerateRandomNumbers();
         }
 
     }

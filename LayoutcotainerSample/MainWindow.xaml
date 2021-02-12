@@ -53,6 +53,7 @@
                 <TextBox Grid.Column="2" Grid.Row="2">250</TextBox>
             </Grid>
             </Border>
+            
 
         </StackPanel>
         

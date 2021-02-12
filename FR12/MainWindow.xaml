@@ -1,0 +1,26 @@
+﻿<Window x:Class="FR12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FR12"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ListBox ItemsSource="{Binding Personen}" SelectedItem="{Binding AusgewaehltePerson}" DockPanel.Dock="Left">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding PersonId}"></TextBlock>
+                        <TextBlock Text="{Binding Vorname}"></TextBlock>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel>
+            <TextBlock Text="{Binding AusgewaehltePerson.Vorname}"></TextBlock>
+            <Image Source="{Binding AusgewaehltePerson.Bild}"/>
+        </StackPanel>
+    </DockPanel>
+</Window>
