@@ -193,7 +193,7 @@ namespace MatheWPF
             if (Operator == "-")
                 GesamtSubtraktion++;
             else
-                _GesamtAddition++;
+                GesamtAddition++;
 
         }
 
