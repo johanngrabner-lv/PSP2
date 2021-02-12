@@ -16,6 +16,8 @@ namespace DemoBindingToCollection
 
         public string Abbildung { get; set; }
 
+    
+
         public override string ToString()
         {
             return $"{ProduktId} -{Bezeichnung}";

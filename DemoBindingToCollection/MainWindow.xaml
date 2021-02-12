@@ -8,20 +8,36 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <!--Bindung to Observable-Collection-->
-        <ListBox ItemsSource="{Binding MeineProdukte}" DockPanel.Dock="Left">
+        <ListBox ItemsSource="{Binding MeineProdukte}"
+                 SelectedItem="{Binding AusgewaehltesProdukt}"
+                 DockPanel.Dock="Left">
             <ListBox.ItemTemplate>
                 <!-- define view of object-->
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding ProduktId}"/>
-                        <TextBlock Text="{Binding Bezeichnung}"/>
-                        <Image Source="{Binding Abbildung}"/>
+                        <TextBlock Text="{Binding Bezeichnung}"/>                                          
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel>
             <TextBlock>Produktdetails</TextBlock>
+            <UniformGrid Columns="2" Rows="3">
+                <TextBlock>ProduktId</TextBlock>
+                <TextBlock Text="{Binding AusgewaehltesProdukt.ProduktId}">              
+                </TextBlock>
+                <TextBlock>Bezeichnung</TextBlock>
+                <TextBox Text="{Binding AusgewaehltesProdukt.Bezeichnung}">
+                </TextBox>
+                <TextBlock>Preis</TextBlock>
+                <TextBox Text="{Binding AusgewaehltesProdukt.Preis}">
+                </TextBox>
+             
+            </UniformGrid>
+            <TextBlock>Bild</TextBlock>
+            <Image Width="100" Height="100" Source="{Binding AusgewaehltesProdukt.Abbildung}">
+            </Image>
         </StackPanel>
     </DockPanel>
 </Window>

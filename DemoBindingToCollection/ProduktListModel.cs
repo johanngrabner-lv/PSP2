@@ -20,6 +20,8 @@ namespace DemoBindingToCollection
             MeineProdukte = new ObservableCollection<Produkt>();
         }
 
+        public Produkt AusgewaehltesProdukt { get; set; }
+
         internal void FillSamples()
         {
             MeineProdukte.Add(
