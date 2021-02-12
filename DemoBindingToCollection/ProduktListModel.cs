@@ -18,9 +18,12 @@ namespace DemoBindingToCollection
         public ProduktListModel()
         {
             MeineProdukte = new ObservableCollection<Produkt>();
+            NeuesProdukt = new Produkt() { Bezeichnung = "Bitte eingeben" };
         }
 
         public Produkt AusgewaehltesProdukt { get; set; }
+
+        public Produkt NeuesProdukt { get; set; }
 
         internal void FillSamples()
         {
@@ -37,6 +40,12 @@ namespace DemoBindingToCollection
                    Bezeichnung = "Handy",
                    Abbildung = "Motorola.jpg"
                });
+        }
+
+        internal void AddNewProdukt()
+        {
+
+            MeineProdukte.Add(NeuesProdukt);
         }
     }
 }

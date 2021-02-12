@@ -27,5 +27,10 @@ namespace DemoBindingToCollection
             dataContext.FillSamples();
             this.DataContext = dataContext;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            dataContext.AddNewProdukt();
+        }
     }
 }

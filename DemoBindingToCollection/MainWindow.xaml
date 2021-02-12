@@ -38,6 +38,19 @@
             <TextBlock>Bild</TextBlock>
             <Image Width="100" Height="100" Source="{Binding AusgewaehltesProdukt.Abbildung}">
             </Image>
+
+            <UniformGrid Columns="2" Rows="3">
+                <TextBlock>ProduktId</TextBlock>
+                <TextBox Text="{Binding NeuesProdukt.ProduktId}">
+                </TextBox>
+                <TextBlock>Bezeichnung</TextBlock>
+                <TextBox Text="{Binding NeuesProdukt.Bezeichnung}">
+                </TextBox>
+                <TextBlock>Preis</TextBlock>
+                <TextBox Text="{Binding NeuesProdukt.Preis}">
+                </TextBox>
+            </UniformGrid>
+            <Button Content="Als neues Produkt hinzufügen" Click="Button_Click"></Button>
         </StackPanel>
     </DockPanel>
 </Window>
