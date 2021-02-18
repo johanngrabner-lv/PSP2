@@ -68,7 +68,16 @@ namespace UrlaubWPF
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            vm.DeleteUrlaub();
+            SuchfensterBewertung suchFenster = new SuchfensterBewertung();
+            suchFenster.ShowDialog();
+
+
+            vm.MinPunkte = suchFenster.Suche.MinPunkte;
+            vm.MaxPunkte = suchFenster.Suche.MaxPunkte;
+
+            vm.FilternBewertung();
+
+
         }
     }
 }

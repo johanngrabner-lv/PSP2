@@ -214,5 +214,21 @@ namespace UrlaubWPF.Model
             set;
         }
 
+        internal void FilternBewertung()
+        {
+            ObservableUrlaubsCollectionFiltered = new System.Collections.ObjectModel.ObservableCollection<Urlaub>(
+                 ObservableUrlaubsCollection.Where(u => u.Bewertung>=MinPunkte && u.Bewertung<=MaxPunkte)
+                 );
+
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs("ObservableUrlaubsCollectionFiltered"));
+                PropertyChanged(this, new PropertyChangedEventArgs("AnzeigeFiltered"));
+            }
+        }
+
+        public int MinPunkte { get; set; }
+        public int MaxPunkte { get; set; }
+
     }
 }

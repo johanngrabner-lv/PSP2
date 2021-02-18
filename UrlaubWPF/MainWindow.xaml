@@ -16,6 +16,7 @@
                 <MenuItem Header="Ausschneiden"></MenuItem>
                 <MenuItem Header="Kopieren"></MenuItem>
                 <MenuItem Header="Suchen" Click="MenuItem_Click_1"></MenuItem>
+                <MenuItem Header="Suchen mit Bewertung" Click="MenuItem_Click_2"></MenuItem>
                 <MenuItem Header="Löschen" Click="MenuItem_Click_2"></MenuItem>
             </MenuItem>
             <MenuItem Header="Info">

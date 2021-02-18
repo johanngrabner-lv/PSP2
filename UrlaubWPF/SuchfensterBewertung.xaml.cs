@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using UrlaubWPF.Model;
 
 namespace UrlaubWPF
 {
@@ -17,11 +18,11 @@ namespace UrlaubWPF
     /// </summary>
     public partial class SuchfensterBewertung : Window
     {
-        public SuchfensterBewertung Suche { get; set; }
+        public SuchfensterBewertungViewModel Suche { get; set; }
         public SuchfensterBewertung()
         {
             InitializeComponent();
-            Suche = new SuchfensterBewertung();
+            Suche = new SuchfensterBewertungViewModel();
             this.DataContext = Suche;
         }
 
