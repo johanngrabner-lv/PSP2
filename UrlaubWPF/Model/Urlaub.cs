@@ -42,4 +42,5 @@ namespace UrlaubWPF.Model
     //Vorgemerkt über ToogleButton, Kontrollkästchen -- IsChecked={Binding Vorgemerkt
     //Löschen eines Urlaubs
     //2. Suchdialog - Suchen nach "Vorgemerkt", Bewertung zwischen 5 und 7
+    //bis 15:00 Uhr - Pause bis 15:15 --- >Projektbesprechung bzw. Auflösung
 }
