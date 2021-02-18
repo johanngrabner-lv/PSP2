@@ -6,4 +6,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="CostaRica.jpg" />
+    <None Remove="croatia.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="CostaRica.jpg" />
+    <EmbeddedResource Include="croatia.jpg" />
+  </ItemGroup>
+
 </Project>

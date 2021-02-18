@@ -33,7 +33,34 @@ namespace UrlaubWPF.Model
             ObservableUrlaubsCollection
         { get; set; }
 
-        public Urlaub AusgeweahlterUrlaub { get; set; }
+        public Urlaub AusgewaehlterUrlaub { get; set; }
+
+        public MainWindowViewModel()
+        {
+            ObservableUrlaubsCollection = new ObservableCollection<Urlaub>();
+
+            ObservableUrlaubsCollection.Add(
+                new Urlaub()
+                {
+                    UrlaubId = 1,
+                    Beschreibung = "am Meer mit Sonnengarantie"
+                ,
+                    Urlaubsart = "Relax",
+                    Bild = "croatia.jpg"
+                });
+
+            ObservableUrlaubsCollection.Add(
+            new Urlaub()
+            {
+                UrlaubId = 2,
+                Beschreibung = "Urlaub mit Fun"
+            ,
+                Urlaubsart = "Action",
+                Bild = "CostaRica.jpg"
+            });
+
+            AusgewaehlterUrlaub = ObservableUrlaubsCollection[1];
+        }
 
 
 

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UrlaubWPF.Model;
 
 namespace UrlaubWPF
 {
@@ -22,7 +23,10 @@ namespace UrlaubWPF
     {
         public MainWindow()
         {
+            //Load XAML - creates visual tree
             InitializeComponent();
+            MainWindowViewModel vm = new MainWindowViewModel();
+            this.DataContext = vm;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
