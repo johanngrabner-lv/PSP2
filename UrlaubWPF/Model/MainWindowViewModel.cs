@@ -117,11 +117,19 @@ namespace UrlaubWPF.Model
             ObservableUrlaubsCollection.Add(neu);
             //Zusätzlich auch in DB speichern
 
+            int x = (1 > 2) ? 5 : 7;
+
             if (PropertyChanged!=null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs("AnzahlUrlaubGesamt"));
+
+                if (NeuerUrlaub.Urlaubsart=="Relax")
                 PropertyChanged(this, new PropertyChangedEventArgs("AnzahlUrlaubRelax"));
-                PropertyChanged(this, new PropertyChangedEventArgs("AnzahlUrlaubAction"));
+
+//                (NeuerUrlaub.Urlaubsart == "Relax")? PropertyChanged(this, new PropertyChangedEventArgs("AnzahlUrlaubRelax"));
+
+                if (NeuerUrlaub.Urlaubsart == "Action")
+                    PropertyChanged(this, new PropertyChangedEventArgs("AnzahlUrlaubAction"));
             }
 
 
