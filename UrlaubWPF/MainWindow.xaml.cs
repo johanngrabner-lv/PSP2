@@ -52,5 +52,13 @@ namespace UrlaubWPF
             // vm.ObservableUrlaubsCollection.Add(vm.NeuerUrlaub);
             vm.AddNewUrlaub();
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            Suchfenster suchFenster = new Suchfenster();
+            suchFenster.ShowDialog();
+            //Text welcher im Suchdialog eingegeben wurde
+            //suchFenster.
+        }
     }
 }

@@ -15,6 +15,7 @@
             <MenuItem Header="Bearbeiten">
                 <MenuItem Header="Ausschneiden"></MenuItem>
                 <MenuItem Header="Kopieren"></MenuItem>
+                <MenuItem Header="Suchen" Click="MenuItem_Click_1"></MenuItem>
             </MenuItem>
             <MenuItem Header="Info">
                 <MenuItem Header="Copyright" Click="MenuItem_Click"></MenuItem>                

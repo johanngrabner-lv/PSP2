@@ -17,11 +17,14 @@ namespace UrlaubWPF
     /// </summary>
     public partial class Suchfenster : Window
     {
+        public SuchfensterViewModel Suche{ get; set; }
         public Suchfenster()
         {
             InitializeComponent();
 
-            this.DataContext = new SuchfensterViewModel();
+            Suche = new SuchfensterViewModel();
+
+            this.DataContext = Suche;
         }
     }
 }
