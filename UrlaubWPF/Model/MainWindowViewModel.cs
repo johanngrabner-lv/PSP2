@@ -13,7 +13,7 @@ namespace UrlaubWPF.Model
         //1. Nuget Entity Framework
         //2. Datenbankkontext 
 
-        private UrlaubsContext urlaubsContext = new UrlaubsContext();
+        private UrlaubsContextV1 urlaubsContext = new UrlaubsContextV1();
 
         public string AnzahlUrlaubGesamt
         {
@@ -54,7 +54,8 @@ namespace UrlaubWPF.Model
                  UrlaubId = 1,
                  Beschreibung = "am Meer mit Sonnengarantie",
                  Urlaubsart = "Relax",
-                 Bild = "croatia.jpg"
+                 Bild = "croatia.jpg",
+                 Kontinent="Europa"
              });
 
             urlaubsContext.Urlaub.Add(ObservableUrlaubsCollection[0]);
@@ -65,7 +66,8 @@ namespace UrlaubWPF.Model
                 UrlaubId = 2,
                 Beschreibung = "Urlaub mit Fun",
                 Urlaubsart = "Action",
-                Bild = "CostaRica.jpg"
+                Bild = "CostaRica.jpg",
+                Kontinent = "Amerika"
             });
             urlaubsContext.Urlaub.Add(ObservableUrlaubsCollection[1]);
             ObservableUrlaubsCollection.Add(
@@ -74,7 +76,8 @@ namespace UrlaubWPF.Model
             UrlaubId = 3,
             Beschreibung = "biken in den Bergen",
             Urlaubsart = "Action",
-            Bild = "Salzburg.jpg"
+            Bild = "Salzburg.jpg",
+            Kontinent = "Europa"
         });
             urlaubsContext.Urlaub.Add(ObservableUrlaubsCollection[2]);
             urlaubsContext.SaveChanges();
@@ -95,7 +98,7 @@ namespace UrlaubWPF.Model
 
             //InitFirstLoad();
             //Server Exlorer - Add DataConnection - Databasefile -- Users-Directory - UrlaubWPF.Model.UrlaubsContext.mdf
-            InitLoad();
+             InitLoad();
 
             AusgewaehlterUrlaub = ObservableUrlaubsCollection[1];
 

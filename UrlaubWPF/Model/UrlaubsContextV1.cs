@@ -5,8 +5,9 @@ using System.Text;
 
 namespace UrlaubWPF.Model
 {
-    class UrlaubsContext: DbContext
+    class UrlaubsContextV1: DbContext
     {
         public DbSet<Urlaub> Urlaub{ get; set; }
+
     }
 }

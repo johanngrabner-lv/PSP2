@@ -32,5 +32,14 @@ namespace UrlaubWPF.Model
 
         //Kontrollkästchen in der GUI
         public bool Vorgemerkt { get; set; }
+
+        public string Kontinent { get; set; }
     }
+
+    //Aufgabe 18.02.2021
+    //GUI Erweitern 
+    //-- Bewertung über Slider Value={Binding Bewertung
+    //Vorgemerkt über ToogleButton, Kontrollkästchen -- IsChecked={Binding Vorgemerkt
+    //Löschen eines Urlaubs
+    //2. Suchdialog - Suchen nach "Vorgemerkt", Bewertung zwischen 5 und 7
 }
