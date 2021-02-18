@@ -24,6 +24,8 @@ namespace UrlaubWPF.Model
                     .Count(); }
            
         }
+
+        public ObservableCollection<string> Urlaubsarten { get; set; }
         private string _AnzahlUrlaubRelax;
 
         public string AnzahlUrlaubRelax
@@ -40,7 +42,7 @@ namespace UrlaubWPF.Model
             ObservableUrlaubsCollection
         { get; set; }
 
-        public Urlaub AusgewaehlterUrlaub { get; set; }
+     
 
         public MainWindowViewModel()
         {
@@ -74,9 +76,16 @@ namespace UrlaubWPF.Model
         });
 
             AusgewaehlterUrlaub = ObservableUrlaubsCollection[1];
+
+            Urlaubsarten = new ObservableCollection<string>();
+            Urlaubsarten.Add("Relax");
+            Urlaubsarten.Add("Action");
+
+            NeuerUrlaub = new Urlaub();
         }
 
-
+        public Urlaub AusgewaehlterUrlaub { get; set; }
+        public Urlaub NeuerUrlaub { get; set; }
 
     }
 }
