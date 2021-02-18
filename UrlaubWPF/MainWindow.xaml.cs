@@ -21,11 +21,17 @@ namespace UrlaubWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+       public void Demo1()
+        {
+            int i;
+        }
+        MainWindowViewModel vm = new MainWindowViewModel();
         public MainWindow()
         {
+            //i?
             //Load XAML - creates visual tree
             InitializeComponent();
-            MainWindowViewModel vm = new MainWindowViewModel();
+
             this.DataContext = vm;
         }
 
@@ -34,6 +40,17 @@ namespace UrlaubWPF
             //   MessageBox.Show("(c) Johann Grabner Campus02","Copyright");
             WindowCopyright myWindow = new WindowCopyright();
             myWindow.ShowDialog(); //Dialog-Modus - Modales
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            //var myVM = (MainWindowViewModel)this.DataContext;
+            //myVM.ObservableUrlaubsCollection.Add(myVM.NeuerUrlaub);
+
+
+            // vm.ObservableUrlaubsCollection.Add(vm.NeuerUrlaub);
+            vm.AddNewUrlaub();
         }
     }
 }

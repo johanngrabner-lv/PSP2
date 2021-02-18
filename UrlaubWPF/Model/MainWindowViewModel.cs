@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Linq;
+using System.ComponentModel;
 
 namespace UrlaubWPF.Model
 {
-    class MainWindowViewModel
+    class MainWindowViewModel: INotifyPropertyChanged
     {
-        private string _AnzahlUrlaubGesamt;
+        
 
         public string AnzahlUrlaubGesamt
         {
             get { return "Anzahl gesamt: " + ObservableUrlaubsCollection.Count();}
            
         }
-        private string _AnzahlUrlaubAction;
+        
 
         public string AnzahlUrlaubAction
         {
@@ -26,8 +27,7 @@ namespace UrlaubWPF.Model
         }
 
         public ObservableCollection<string> Urlaubsarten { get; set; }
-        private string _AnzahlUrlaubRelax;
-
+       
         public string AnzahlUrlaubRelax
         {
             get {
@@ -84,8 +84,48 @@ namespace UrlaubWPF.Model
             NeuerUrlaub = new Urlaub();
         }
 
-        public Urlaub AusgewaehlterUrlaub { get; set; }
+     
+
+        private Urlaub _AusgewaehlterUrlaub;
+
+        public Urlaub AusgewaehlterUrlaub
+        {
+            get { return _AusgewaehlterUrlaub; }
+            set { 
+                _AusgewaehlterUrlaub = value; 
+                if (PropertyChanged !=null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("AusgewaehlterUrlaub"));
+                }
+            }
+        }
+
         public Urlaub NeuerUrlaub { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void AddNewUrlaub()
+        {
+            Urlaub neu = new Urlaub();
+            neu.Beschreibung = NeuerUrlaub.Beschreibung;
+            neu.Bild = NeuerUrlaub.Bild;
+            neu.Urlaubsart = NeuerUrlaub.Urlaubsart;
+
+            int hoechsteId = ObservableUrlaubsCollection.Max(u => u.UrlaubId);
+
+            neu.UrlaubId = ++hoechsteId;
+            ObservableUrlaubsCollection.Add(neu);
+            //Zusätzlich auch in DB speichern
+
+            if (PropertyChanged!=null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs("AnzahlUrlaubGesamt"));
+                PropertyChanged(this, new PropertyChangedEventArgs("AnzahlUrlaubRelax"));
+                PropertyChanged(this, new PropertyChangedEventArgs("AnzahlUrlaubAction"));
+            }
+
+
+        }
 
     }
 }

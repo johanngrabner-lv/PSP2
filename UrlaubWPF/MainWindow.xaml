@@ -59,7 +59,7 @@
                 <TextBox Text="{Binding NeuerUrlaub.Beschreibung}"></TextBox>
                 <TextBlock>Bild</TextBlock>
                 <TextBox Text="{Binding NeuerUrlaub.Bild}"></TextBox>
-                <Button>Speichern</Button>
+                <Button Click="Button_Click">Speichern</Button>
             </UniformGrid>
         </UniformGrid>
     </DockPanel>
