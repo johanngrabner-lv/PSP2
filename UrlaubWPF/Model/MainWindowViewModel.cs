@@ -93,8 +93,25 @@ namespace UrlaubWPF.Model
             if (PropertyChanged!=null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs("ObservableUrlaubsCollectionFiltered"));
+                PropertyChanged(this, new PropertyChangedEventArgs("AnzeigeFiltered"));
             }
         }
+
+      
+
+        public string AnzeigeFiltered
+        {
+            
+            get {
+                int count = 0;
+                if (ObservableUrlaubsCollectionFiltered!=null)
+                {
+                    count = ObservableUrlaubsCollectionFiltered.Count();
+                }
+                return "Filtered: " + count;
+            }            
+        }
+
 
         private Urlaub _AusgewaehlterUrlaub;
 

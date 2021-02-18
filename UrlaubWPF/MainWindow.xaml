@@ -25,6 +25,7 @@
             <StatusBarItem Content="{Binding AnzahlUrlaubGesamt}"></StatusBarItem>
             <StatusBarItem Content="{Binding AnzahlUrlaubRelax}"></StatusBarItem>
             <StatusBarItem Content="{Binding AnzahlUrlaubAction}"></StatusBarItem>
+            <StatusBarItem Content="{Binding AnzeigeFiltered}"></StatusBarItem>
         </StatusBar>
         <ListBox DockPanel.Dock="Left" 
                  ItemsSource="{Binding ObservableUrlaubsCollection}"
