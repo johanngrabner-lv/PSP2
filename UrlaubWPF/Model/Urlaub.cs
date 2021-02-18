@@ -28,7 +28,21 @@ namespace UrlaubWPF.Model
         public event PropertyChangedEventHandler PropertyChanged;
 
         //Bewertung von 0 Punkten bis 10 Punkte über einen Slider
-        public int Bewertung { get; set; }
+        // public int Bewertung { get; set; }
+        private int _Bewertung;
+
+        public int Bewertung
+        {
+            get { return _Bewertung; }
+            set { 
+                _Bewertung = value; 
+                if (PropertyChanged!=null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Bewertung"));
+                }
+            }
+        }
+
 
         //Kontrollkästchen in der GUI
         public bool Vorgemerkt { get; set; }

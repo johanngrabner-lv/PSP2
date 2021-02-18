@@ -32,9 +32,13 @@
                  SelectedItem="{Binding AusgewaehlterUrlaub}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <UniformGrid Columns="2" Rows="1">
+                    <UniformGrid Columns="6" Rows="1">
                         <TextBlock Text="{Binding UrlaubId}"></TextBlock>
                         <TextBlock Text="{Binding Urlaubsart}"></TextBlock>
+                        <TextBlock Text="Vorgemerkt"></TextBlock>
+                        <TextBlock Text="{Binding Vorgemerkt}"></TextBlock>
+                        <TextBlock Text="Bewertung"></TextBlock>
+                        <TextBlock Text="{Binding Bewertung}"></TextBlock>
                     </UniformGrid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -48,9 +52,10 @@
                  SelectedItem="{Binding AusgewaehlterUrlaub}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <UniformGrid Columns="2" Rows="1">
+                    <UniformGrid Columns="3" Rows="1">
                         <TextBlock Text="{Binding UrlaubId}"></TextBlock>
                         <TextBlock Text="{Binding Urlaubsart}"></TextBlock>
+                        <TextBlock Text="{Binding Vorgemerkt}"></TextBlock>
                     </UniformGrid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -60,15 +65,19 @@
             -->
         </ListBox>
         <UniformGrid Rows="2" Columns="1">
-            <UniformGrid DockPanel.Dock="Top" Columns="2" Rows="3">
+            <UniformGrid DockPanel.Dock="Top" Columns="2" Rows="5">
                 <TextBlock>Urlaubsart</TextBlock>
                 <TextBox Text="{Binding AusgewaehlterUrlaub.Urlaubsart}"></TextBox>
                 <TextBlock>Beschreibung</TextBlock>
                 <TextBox Text="{Binding AusgewaehlterUrlaub.Beschreibung}"></TextBox>
                 <TextBlock>Bild</TextBlock>
                 <Image Source="{Binding AusgewaehlterUrlaub.Bild}"></Image>
+                <TextBlock>Vorgemerkt</TextBlock>
+                <CheckBox IsChecked="{Binding AusgewaehlterUrlaub.Vorgemerkt}"></CheckBox>
+                <TextBlock>Bewertung</TextBlock>
+                <Slider Minimum="0" Maximum="10" Value="{Binding AusgewaehlterUrlaub.Bewertung}"></Slider>
             </UniformGrid>
-            <UniformGrid DockPanel.Dock="Bottom"  Columns="2" Rows="4">
+            <UniformGrid DockPanel.Dock="Bottom"  Columns="2" Rows="5">
                 <TextBlock>Urlaubsart</TextBlock>
                 <ComboBox ItemsSource="{Binding Urlaubsarten}"
                          SelectedItem="{Binding NeuerUrlaub.Urlaubsart}"
@@ -77,6 +86,8 @@
                 <TextBox Text="{Binding NeuerUrlaub.Beschreibung}"></TextBox>
                 <TextBlock>Bild</TextBlock>
                 <TextBox Text="{Binding NeuerUrlaub.Bild}"></TextBox>
+                <TextBlock>Vorgemerkt</TextBlock>
+                <CheckBox IsChecked="{Binding AusgewaehlterUrlaub.Vorgemerkt}"></CheckBox>
                 <Button Click="Button_Click">Speichern</Button>
             </UniformGrid>
         </UniformGrid>

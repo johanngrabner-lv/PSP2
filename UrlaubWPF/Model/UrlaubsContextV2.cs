@@ -5,7 +5,7 @@ using System.Text;
 
 namespace UrlaubWPF.Model
 {
-    class UrlaubsContextV1: DbContext
+    class UrlaubsContextV2: DbContext
     {
         public DbSet<Urlaub> Urlaub{ get; set; }
 
