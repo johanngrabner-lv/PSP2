@@ -93,8 +93,9 @@ namespace UrlaubWPF.Model
         {
             ObservableUrlaubsCollection = new ObservableCollection<Urlaub>();
 
-            InitFirstLoad();
-            //InitLoad();
+            //InitFirstLoad();
+            //Server Exlorer - Add DataConnection - Databasefile -- Users-Directory - UrlaubWPF.Model.UrlaubsContext.mdf
+            InitLoad();
 
             AusgewaehlterUrlaub = ObservableUrlaubsCollection[1];
 
