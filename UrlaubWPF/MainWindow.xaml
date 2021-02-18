@@ -25,6 +25,21 @@
             <StatusBarItem Content="{Binding AnzahlUrlaubRelax}"></StatusBarItem>
             <StatusBarItem Content="{Binding AnzahlUrlaubAction}"></StatusBarItem>
         </StatusBar>
-        
+        <ListBox DockPanel.Dock="Left" 
+                 ItemsSource="{Binding ObservableUrlaubsCollection}"
+                 SelectedItem="{Binding AusgewaehlterUrlaub}">
+            <!-- Items
+            <ListBoxItem>Urlaub1</ListBoxItem>
+            <ListBoxItem>Urlaub2</ListBoxItem>
+            -->
+        </ListBox>
+        <UniformGrid Columns="2" Rows="4">
+            <TextBlock>Urlaubsart</TextBlock>
+            <TextBox Text="{Binding AusgewaehlterUrlaub.Art}"></TextBox>
+            <TextBlock>Beschreibung</TextBlock>
+            <TextBox Text="{Binding AusgewaehlterUrlaub.Beschreibung}"></TextBox>
+            <TextBlock>Bild</TextBlock>
+            <Image Source="{Binding AusgewaehlterUrlaub.Bild}"></Image>
+        </UniformGrid>
     </DockPanel>
 </Window>
