@@ -17,9 +17,14 @@
                 <MenuItem Header="Kopieren"></MenuItem>
             </MenuItem>
             <MenuItem Header="Info">
-                <MenuItem Header="Copyright"></MenuItem>                
+                <MenuItem Header="Copyright" Click="MenuItem_Click"></MenuItem>                
             </MenuItem>
         </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content="{Binding AnzahlUrlaubGesamt}"></StatusBarItem>
+            <StatusBarItem Content="{Binding AnzahlUrlaubRelax}"></StatusBarItem>
+            <StatusBarItem Content="{Binding AnzahlUrlaubAction}"></StatusBarItem>
+        </StatusBar>
         
     </DockPanel>
 </Window>

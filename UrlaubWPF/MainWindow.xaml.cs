@@ -24,5 +24,12 @@ namespace UrlaubWPF
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            //   MessageBox.Show("(c) Johann Grabner Campus02","Copyright");
+            WindowCopyright myWindow = new WindowCopyright();
+            myWindow.ShowDialog(); //Dialog-Modus - Modales
+        }
     }
 }
