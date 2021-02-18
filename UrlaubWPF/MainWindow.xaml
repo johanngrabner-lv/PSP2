@@ -42,6 +42,22 @@
             <ListBoxItem>Urlaub2</ListBoxItem>
             -->
         </ListBox>
+        <ListBox DockPanel.Dock="Left" 
+                 ItemsSource="{Binding ObservableUrlaubsCollectionFiltered}"
+                 SelectedItem="{Binding AusgewaehlterUrlaub}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <UniformGrid Columns="2" Rows="1">
+                        <TextBlock Text="{Binding UrlaubId}"></TextBlock>
+                        <TextBlock Text="{Binding Urlaubsart}"></TextBlock>
+                    </UniformGrid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <!-- Items
+            <ListBoxItem>Urlaub1</ListBoxItem>
+            <ListBoxItem>Urlaub2</ListBoxItem>
+            -->
+        </ListBox>
         <UniformGrid Rows="2" Columns="1">
             <UniformGrid DockPanel.Dock="Top" Columns="2" Rows="3">
                 <TextBlock>Urlaubsart</TextBlock>

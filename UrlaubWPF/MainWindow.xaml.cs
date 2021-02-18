@@ -58,7 +58,12 @@ namespace UrlaubWPF
             Suchfenster suchFenster = new Suchfenster();
             suchFenster.ShowDialog();
             //Text welcher im Suchdialog eingegeben wurde
-            //suchFenster.
+            var suchText = suchFenster.Suche.Suchtext;
+            vm.Suchtext = suchText;
+
+            vm.Filtern();
+
+            
         }
     }
 }

@@ -84,7 +84,17 @@ namespace UrlaubWPF.Model
             NeuerUrlaub = new Urlaub();
         }
 
-     
+        internal void Filtern()
+        {
+            ObservableUrlaubsCollectionFiltered = new System.Collections.ObjectModel.ObservableCollection<Urlaub>(
+                 ObservableUrlaubsCollection.Where(u => u.Beschreibung.Contains(Suchtext)
+                 ));
+
+            if (PropertyChanged!=null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs("ObservableUrlaubsCollectionFiltered"));
+            }
+        }
 
         private Urlaub _AusgewaehlterUrlaub;
 
@@ -133,6 +143,13 @@ namespace UrlaubWPF.Model
             }
 
 
+        }
+
+        public string  Suchtext{ get; set; }
+        public ObservableCollection<Urlaub> ObservableUrlaubsCollectionFiltered
+        {
+            get;
+            set;
         }
 
     }
