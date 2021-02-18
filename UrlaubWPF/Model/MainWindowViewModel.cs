@@ -19,15 +19,21 @@ namespace UrlaubWPF.Model
 
         public string AnzahlUrlaubAction
         {
-            get { return _AnzahlUrlaubAction; }
-            set { _AnzahlUrlaubAction = value; }
+            get { return "Anzahl Action: " + ObservableUrlaubsCollection
+                    .Where(u=>u.Urlaubsart=="Action")
+                    .Count(); }
+           
         }
         private string _AnzahlUrlaubRelax;
 
         public string AnzahlUrlaubRelax
         {
-            get { return _AnzahlUrlaubRelax; }
-            set { _AnzahlUrlaubRelax = value; }
+            get {
+                return "Anzahl Relax: " + ObservableUrlaubsCollection
+                  .Where(u => u.Urlaubsart == "Relax")
+                  .Count();
+            }
+           
         }
 
         public ObservableCollection<Urlaub>

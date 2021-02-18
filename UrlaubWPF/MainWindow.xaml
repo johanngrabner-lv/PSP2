@@ -49,5 +49,13 @@
             <TextBlock>Bild</TextBlock>
             <Image Source="{Binding AusgewaehlterUrlaub.Bild}"></Image>
         </UniformGrid>
+        <UniformGrid Columns="2" Rows="4">
+            <TextBlock>Urlaubsart</TextBlock>
+            <TextBox Text="{Binding NeuerUrlaub.Urlaubsart}"></TextBox>
+            <TextBlock>Beschreibung</TextBlock>
+            <TextBox Text="{Binding NeuerUrlaub.Beschreibung}"></TextBox>
+            <TextBlock>Bild</TextBlock>
+            <TextBox Text="{Binding NeuerUrlaub.Bild}"></TextBox>
+        </UniformGrid>
     </DockPanel>
 </Window>
