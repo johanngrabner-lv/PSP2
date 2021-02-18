@@ -92,12 +92,12 @@ namespace UrlaubWPF.Model
 
         internal void DeleteUrlaub()
         {
-            ObservableUrlaubsCollection.Remove(AusgewaehlterUrlaub);
-
-
             var zuLoeschenderUrlaub = urlaubsContext.Urlaub.Find(AusgewaehlterUrlaub.UrlaubId);
             urlaubsContext.Urlaub.Remove(zuLoeschenderUrlaub);
             urlaubsContext.SaveChanges();
+
+            ObservableUrlaubsCollection.Remove(AusgewaehlterUrlaub);
+
         }
 
         void InitLoad()
