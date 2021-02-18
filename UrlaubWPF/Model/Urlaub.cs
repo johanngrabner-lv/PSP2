@@ -26,5 +26,11 @@ namespace UrlaubWPF.Model
         public string Bild { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        //Bewertung von 0 Punkten bis 10 Punkte über einen Slider
+        public int Bewertung { get; set; }
+
+        //Kontrollkästchen in der GUI
+        public bool Vorgemerkt { get; set; }
     }
 }

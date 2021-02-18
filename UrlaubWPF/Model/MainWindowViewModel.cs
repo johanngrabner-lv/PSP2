@@ -9,7 +9,9 @@ namespace UrlaubWPF.Model
 {
     class MainWindowViewModel: INotifyPropertyChanged
     {
-        
+        //Entity Framework context verwenden
+        //1. Nuget Entity Framework
+        //2. Datenbankkontext 
 
         public string AnzahlUrlaubGesamt
         {
