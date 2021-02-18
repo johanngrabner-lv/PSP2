@@ -36,6 +36,9 @@ namespace UrlaubWPF.Model
         public string Kontinent { get; set; }
     }
 
+    //Server Explorer - Data Connections - Add Connection 
+    //Microsoft SQL Server Database File (SqlClient)
+    //Browse - c:\Users\jgrabner\.....UrlaubV1.mdf
     //Aufgabe 18.02.2021
     //GUI Erweitern 
     //-- Bewertung über Slider Value={Binding Bewertung
