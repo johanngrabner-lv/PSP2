@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Linq;
 
 namespace UrlaubWPF.Model
 {
@@ -11,8 +12,8 @@ namespace UrlaubWPF.Model
 
         public string AnzahlUrlaubGesamt
         {
-            get { return _AnzahlUrlaubGesamt; }
-            set { _AnzahlUrlaubGesamt = value; }
+            get { return "Anzahl gesamt: " + ObservableUrlaubsCollection.Count();}
+           
         }
         private string _AnzahlUrlaubAction;
 
@@ -43,8 +44,7 @@ namespace UrlaubWPF.Model
                 new Urlaub()
                 {
                     UrlaubId = 1,
-                    Beschreibung = "am Meer mit Sonnengarantie"
-                ,
+                    Beschreibung = "am Meer mit Sonnengarantie",
                     Urlaubsart = "Relax",
                     Bild = "croatia.jpg"
                 });
@@ -53,11 +53,19 @@ namespace UrlaubWPF.Model
             new Urlaub()
             {
                 UrlaubId = 2,
-                Beschreibung = "Urlaub mit Fun"
-            ,
+                Beschreibung = "Urlaub mit Fun",
                 Urlaubsart = "Action",
                 Bild = "CostaRica.jpg"
             });
+
+            ObservableUrlaubsCollection.Add(
+        new Urlaub()
+        {
+            UrlaubId = 3,
+            Beschreibung = "biken in den Bergen",
+            Urlaubsart = "Action",
+            Bild = "Salzburg.jpg"
+        });
 
             AusgewaehlterUrlaub = ObservableUrlaubsCollection[1];
         }
