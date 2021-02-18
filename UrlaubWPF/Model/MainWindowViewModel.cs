@@ -13,6 +13,8 @@ namespace UrlaubWPF.Model
         //1. Nuget Entity Framework
         //2. Datenbankkontext 
 
+        private UrlaubsContext urlaubsContext = new UrlaubsContext();
+
         public string AnzahlUrlaubGesamt
         {
             get { return "Anzahl gesamt: " + ObservableUrlaubsCollection.Count();}
@@ -44,20 +46,18 @@ namespace UrlaubWPF.Model
             ObservableUrlaubsCollection
         { get; set; }
 
-     
-
-        public MainWindowViewModel()
+     public void InitFirstLoad()
         {
-            ObservableUrlaubsCollection = new ObservableCollection<Urlaub>();
-
             ObservableUrlaubsCollection.Add(
-                new Urlaub()
-                {
-                    UrlaubId = 1,
-                    Beschreibung = "am Meer mit Sonnengarantie",
-                    Urlaubsart = "Relax",
-                    Bild = "croatia.jpg"
-                });
+             new Urlaub()
+             {
+                 UrlaubId = 1,
+                 Beschreibung = "am Meer mit Sonnengarantie",
+                 Urlaubsart = "Relax",
+                 Bild = "croatia.jpg"
+             });
+
+            urlaubsContext.Urlaub.Add(ObservableUrlaubsCollection[0]);
 
             ObservableUrlaubsCollection.Add(
             new Urlaub()
@@ -67,7 +67,7 @@ namespace UrlaubWPF.Model
                 Urlaubsart = "Action",
                 Bild = "CostaRica.jpg"
             });
-
+            urlaubsContext.Urlaub.Add(ObservableUrlaubsCollection[1]);
             ObservableUrlaubsCollection.Add(
         new Urlaub()
         {
@@ -76,6 +76,25 @@ namespace UrlaubWPF.Model
             Urlaubsart = "Action",
             Bild = "Salzburg.jpg"
         });
+            urlaubsContext.Urlaub.Add(ObservableUrlaubsCollection[2]);
+            urlaubsContext.SaveChanges();
+        }
+
+        void InitLoad()
+        {
+            var urlaube = urlaubsContext.Urlaub.ToList();
+            foreach (Urlaub urlaub in urlaube)
+            {
+                ObservableUrlaubsCollection.Add(urlaub);
+            }
+        }
+
+        public MainWindowViewModel()
+        {
+            ObservableUrlaubsCollection = new ObservableCollection<Urlaub>();
+
+            InitFirstLoad();
+            //InitLoad();
 
             AusgewaehlterUrlaub = ObservableUrlaubsCollection[1];
 
@@ -84,6 +103,7 @@ namespace UrlaubWPF.Model
             Urlaubsarten.Add("Action");
 
             NeuerUrlaub = new Urlaub();
+          
         }
 
         internal void Filtern()
@@ -145,6 +165,8 @@ namespace UrlaubWPF.Model
             neu.UrlaubId = ++hoechsteId;
             ObservableUrlaubsCollection.Add(neu);
             //Zusätzlich auch in DB speichern
+            urlaubsContext.Urlaub.Add(neu);
+            urlaubsContext.SaveChanges();
 
             int x = (1 > 2) ? 5 : 7;
 
